@@ -155,6 +155,18 @@
 
 ---
 
+## 本節で導入した記号一覧
+
+| 記号 | 読み方 | 意味・用途 | 例 |
+|------|--------|------------|-----|
+| \\(\\Box\\) | ボックス | 必然性演算子 | \\(\\Box p\\): 必然的に p |
+| \\(\\Diamond\\) | ダイヤモンド | 可能性演算子 | \\(\\Diamond p\\): 可能的に p |
+| \\(\\mathcal{L}_\\Box\\) | エル・ボックス | 様相論理の言語 | 形式言語の名称 |
+| \\(\\phi\\) | ファイ | 任意の論理式 | \\(\\Box\\phi\\): 必然的に \\(\\phi\\) |
+| \\(\\psi\\) | プサイ | 任意の論理式 | \\(\\phi \\land \\psi\\): \\(\\phi\\) かつ \\(\\psi\\) |
+| \\(\\chi\\) | カイ | 任意の論理式 | 複雑な式に使用 |
+| \\(\\leftrightarrow\\) | 同値 | 双方向の条件関係 | \\(\\Box p \\leftrightarrow \\neg\\Diamond\\neg p\\) |
+
 ## 参考文献
 
 - Chellas, B. F. (1980). *Modal Logic: An Introduction*. Cambridge University Press.
