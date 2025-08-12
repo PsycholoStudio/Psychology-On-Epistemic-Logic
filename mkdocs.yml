@@ -77,6 +77,8 @@ nav:
       - 2.1 可能世界の概念: foundations/2-1-possible-worlds.md
       - 2.2 クリプキフレームとモデル: foundations/2-2-kripke-frames.md
       - 2.3 真理条件と妥当性: foundations/2-3-truth-conditions.md
+      - 2.4 フレームの性質: foundations/2-4-frame-properties.md
+      - 2.5 一般フレーム理論: foundations/2-5-general-frames.md
   - 応用編:
     - 第1章 心の理論と発達:
       - 1.1 心の理論の発達段階: applications/1-1-theory-of-mind.md
