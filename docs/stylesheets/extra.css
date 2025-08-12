@@ -1,0 +1,30 @@
+/* Japanese font optimization */
+.md-typeset {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, "Noto Sans JP", sans-serif;
+}
+
+/* Math display improvements */
+.arithmatex {
+  margin: 1em 0;
+}
+
+/* Code block improvements for Japanese */
+.md-typeset code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, "Noto Sans Mono", monospace;
+}
+
+/* Admonition styling for Japanese content */
+.md-typeset .admonition {
+  margin: 1.5em 0;
+}
+
+/* Table styling improvements */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 700;
+}
