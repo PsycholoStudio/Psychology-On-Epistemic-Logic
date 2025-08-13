@@ -24,13 +24,13 @@
 .md-typeset .admonition li,
 .md-typeset .admonition td,
 .md-typeset .admonition th {
-  font-size: 1rem; /* 本文と同じサイズ */
+  font-size: 0.8rem; /* 本文と同じサイズ */
   line-height: 1.6; /* 読みやすい行間 */
 }
 
 /* Admonitionのタイトルも適切なサイズに */
 .md-typeset .admonition-title {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
