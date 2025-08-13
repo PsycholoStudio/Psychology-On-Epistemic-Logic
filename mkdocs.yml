@@ -54,6 +54,8 @@ markdown_extensions:
       permalink: true
   - attr_list
   - md_in_html
+  - nl2br  # 改行を<br>に変換（リストの前の空行問題を緩和）
+  - sane_lists  # リストのパースを改善
 
 extra_javascript:
   - javascripts/katex.js
