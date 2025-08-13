@@ -64,6 +64,7 @@
 !!! example "ゲティア事例の形式化"
     
     **状況設定**：
+    
     - Smith は「Jones が仕事を得る」（\\(p\\)）と信じている
     - Smith は「Jones のポケットに10枚のコインがある」（\\(q\\)）を知っている
     - Smith は「仕事を得る人のポケットに10枚のコインがある」（\\(r\\)）と推論
@@ -94,6 +95,7 @@
 !!! example "高階認識の推論"
     
     **基本的な高階認識**：
+    
     - \\(K_a K_b p\\)：「a は b が p を知っていることを知っている」
     - \\(K_a \\neg K_b p\\)：「a は b が p を知らないことを知っている」
     - \\(B_a K_b p\\)：「a は b が p を知っていると信じている」
@@ -122,12 +124,14 @@
 !!! note "定義1.4.3 —— 線形時相論理（LTL）の体系"
 
     **基本演算子**：
+    
     - **X φ**（neXt）：次の時点で φ が成立
     - **F φ**（Future/Eventually）：いつか φ が成立
     - **G φ**（Globally/Always）：常に φ が成立
     - **φ U ψ**（Until）：ψ が成立するまで φ が成立し続ける
     
     **形式的意味**（パス π = s₀, s₁, s₂, ... において）：
+    
     - \\(\\pi, i \\models X \\phi\\) iff \\(\\pi, i+1 \\models \\phi\\)
     - \\(\\pi, i \\models F \\phi\\) iff \\(\\exists j \\geq i. \\pi, j \\models \\phi\\)
     - \\(\\pi, i \\models G \\phi\\) iff \\(\\forall j \\geq i. \\pi, j \\models \\phi\\)
@@ -170,6 +174,7 @@
 !!! example "信号機システムの検証"
     
     **状態変数**：
+    
     - \\(\\text{red}, \\text{yellow}, \\text{green}\\)：各色の点灯状態
     
     **仕様**：
@@ -194,6 +199,7 @@
 !!! note "定義1.4.4 —— BDI論理（Belief-Desire-Intention Logic）"
 
     **基本演算子**：
+    
     - **BEL(a, φ)**：エージェント a は φ を信じている
     - **GOAL(a, φ)**：エージェント a は φ を目標としている
     - **INTEND(a, φ)**：エージェント a は φ を意図している
