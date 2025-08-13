@@ -91,6 +91,12 @@ nav:
       - 4.2 知識の論理S5: foundations/4-2-knowledge-logic.md
       - 4.3 信念の論理KD45: foundations/4-3-belief-logic.md
       - 4.4 混合システム: foundations/4-4-mixed-systems.md
+    - 第5章 認識論理の変種と比較:
+      - 5.1 知識の段階理論: foundations/5-1-graded-knowledge.md
+      - 5.2 条件付き知識: foundations/5-2-conditional-knowledge.md
+      - 5.3 不完全情報の論理: foundations/5-3-incomplete-information.md
+      - 5.4 資源制約付き推論: foundations/5-4-resource-bounded.md
+      - 5.5 非標準的アプローチ: foundations/5-5-nonstandard.md
   - 応用編:
     - 第1章 心の理論と発達:
       - 1.1 心の理論の発達段階: applications/1-1-theory-of-mind.md
