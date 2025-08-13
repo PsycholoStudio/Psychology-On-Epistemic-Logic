@@ -12,7 +12,6 @@
     
     **動的更新**：新情報による知識の更新プロセスを条件付き知識として理解し、学習と推論の動的側面を捉える。
 
-
 ---
 
 [前節](5-1-graded-knowledge.md)で知識の段階性を学びましたが、この節では知識の**条件性**という別の重要な側面を探求します。現実の知識の多くは、特定の条件や文脈の下でのみ成立する条件付きの性質を持っています。
@@ -50,7 +49,6 @@
 **信念修正**：「もし現在の信念が誤りだと分かったら、どう修正すべきか」という信念修正の論理も条件付き知識を必要とします。
 
 **仮説的推論**：「もし仮説Hが正しければ、観察Oが説明できる」という科学的推論は、条件付き知識の典型例です。
-
 
 ---
 
@@ -126,7 +124,6 @@
 **条件の伝播**：\(K_\psi(\chi \to \varphi) \to (K_\psi\chi \to K_\psi\varphi)\)
 条件付き知識内での推論の妥当性
 
-
 ---
 
 ## 5.2.3 反実仮想的知識
@@ -175,7 +172,6 @@
 
 **計画と意思決定**：
 「この戦略を取れば成功するだろう」という予測は、まだ実現していない条件での知識\(K^{cf}_{strategy}(success)\)です。
-
 
 ---
 
@@ -230,7 +226,6 @@
 
 \[K^{normal}(birds\_fly) \land K^{penguin}\lnot(penguins\_fly)\]
 
-
 ---
 
 ## 5.2.5 動的条件付き知識
@@ -283,7 +278,6 @@ AGM理論の信念修正を条件付き知識で表現します。
 1. 成功：\(K_\psi\psi\)
 2. 一貫性：\(\lnot K_\psi\bot\)（\(\psi\)が一貫的なら）
 3. 保存：\(K\varphi \land \lnot K\lnot\psi \to K_\psi\varphi\)
-
 
 ---
 
@@ -364,7 +358,6 @@ K_context("bank", "土手") if context = "river"
 
 \[K^{source}_\psi\varphi \to K^{target}_{\psi'}\varphi'\]
 
-
 ---
 
 ## まとめ
@@ -387,24 +380,15 @@ K_context("bank", "土手") if context = "river"
 
 次の第3節「不完全情報の論理」では、部分的にしか情報を持たない状況での推論を扱います。不確実性、曖昧性、無知の表現と、それらの下での合理的推論の方法を学習します。
 
-
 ---
 
 ## 参考文献
 
-
 - Lewis, D. (1973). *Counterfactuals*. Blackwell.
-
 - Stalnaker, R. (1968). A theory of conditionals. In N. Rescher (Ed.), *Studies in Logical Theory* (pp. 98-112). Blackwell.
-
 - Baltag, A., & Moss, L. S. (2004). Logics for epistemic programs. *Synthese*, 139(2), 165-224.
-
 - van Ditmarsch, H., van der Hoek, W., & Kooi, B. (2007). *Dynamic Epistemic Logic*. Springer.
-
 - Boutilier, C. (1994). Conditional logics of normality: A modal approach. *Artificial Intelligence*, 68(1), 87-154.
-
 - Giordano, L., Gliozzi, V., Olivetti, N., & Pozzato, G. L. (2007). Preferential description logics. In *Logic for Programming, Artificial Intelligence, and Reasoning* (pp. 257-272).
-
 - Alchourrón, C. E., Gärdenfors, P., & Makinson, D. (1985). On the logic of theory change: Partial meet contraction and revision functions. *Journal of Symbolic Logic*, 50(2), 510-530.
-
 - Plaza, J. (1989). Logics of public communications. In *Proceedings of the 4th International Symposium on Methodologies for Intelligent Systems* (pp. 201-216).

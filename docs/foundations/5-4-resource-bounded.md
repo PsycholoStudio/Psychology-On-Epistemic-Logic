@@ -12,7 +12,6 @@
     
     **任意時間アルゴリズム**：利用可能時間に応じて推論の品質を調整し、時間と精度のトレードオフを最適化する手法を開発する。
 
-
 ---
 
 [前節](5-3-incomplete-information.md)で不完全情報下の推論を学びましたが、この節では**計算資源の制約**という別の現実的制限を扱います。理論上可能な推論と実際に実行可能な推論の間には大きなギャップがあり、これを埋める理論が必要です。
@@ -25,13 +24,9 @@
 
 **論理的全能性**：
 
-
 - すべての論理的帰結を即座に認識する
-
 - 矛盾を決して信じない  
-
 - 論理的に等価な命題に同じ態度を取る
-
 - 計算時間や記憶容量の制限がない
 
 この理想化は数学的には美しいですが、現実の認識主体とは大きく乖離します。
@@ -65,7 +60,6 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
     **ヒューリスティック**：
     完全ではないが効率的な推論方法の使用
 
-
 ---
 
 ## 5.4.2 有限資源の形式化
@@ -92,15 +86,10 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
 
 **推論レベル**：
 
-
 - レベル0：直接記憶されている事実
-
 - レベル1：1ステップ推論で得られる結論
-
 - レベル2：2ステップ推論で得られる結論
-
 - ...
-
 - レベルn：nステップ推論で得られる結論
 
 **資源配分戦略**：
@@ -125,7 +114,6 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
 
 \[K[\alpha, \beta]\varphi := \alpha \leq P(\varphi) \leq \beta\]
 確率の上下限で知識を表現
-
 
 ---
 
@@ -177,11 +165,8 @@ def anytime_reasoning(query, max_time):
 
 **メタレベル質問**：
 
-
 - どの推論方向を優先すべきか？
-
 - いつ推論を停止すべきか？
-
 - どの程度の精度で満足すべきか？
 
 **計算価値理論**：
@@ -190,7 +175,6 @@ def anytime_reasoning(query, max_time):
 
 **最適停止理論**：
 期待される改善が計算コストを下回ったら停止
-
 
 ---
 
@@ -224,11 +208,8 @@ def anytime_reasoning(query, max_time):
 
 **実用的境界**：
 
-
 - 人間の直観的推論：\(K^{AC^0}\)レベル
-
 - 電卓での計算：\(K^P\)レベル  
-
 - コンピュータでの探索：\(K^{EXPTIME}\)レベル
 
 ### 近似知識の公理系
@@ -236,18 +217,14 @@ def anytime_reasoning(query, max_time):
 近似的認識論理の公理化を行います。
 
 **弱化された分配公理**：
-
 \[K^r(\varphi \to \psi) \land K^s\varphi \to K^{r \cdot s}(\psi)\]
 確信度の積で結論の確信度が決まる
 
 **資源単調性**：
-
 \[\text{resources}_1 \leq \text{resources}_2 \implies (K^{resources_1}\varphi \to K^{resources_2}\varphi)\]
 
 **近似的内省**：
-
 \[K^r\varphi \to K^{s}K^r\varphi\] （\(s \geq r\)）
-
 
 ---
 
@@ -266,7 +243,6 @@ def anytime_reasoning(query, max_time):
     「時間\(\Delta t\)以内に\(\varphi\)を知る」
     
     **効力の減衰**：
-
     \[K@t\varphi \land (t' > t + \Delta) \to K@{t'}[\text{decay}(\Delta)]\varphi\]
 
 ### デッドライン制約
@@ -275,21 +251,16 @@ def anytime_reasoning(query, max_time):
 
 **ハード制約**：
 指定時刻までに必ず応答する
-
 \[\text{必ず} \, t_{deadline} \text{までに答を返す}\]
 
 **ソフト制約**：
 遅延にペナルティがある
-
 \[\text{Utility} = f(\text{quality}) - g(\text{delay})\]
 
 **推論のスケジューリング**：
 
-
 - 固定優先度：重要度順に処理
-
 - 動的優先度：締切近い順に処理
-
 - 比例配分：重要度に応じて時間配分
 
 ### 割り込み処理
@@ -311,7 +282,6 @@ def interrupt_handler(new_query, current_queries):
 
 **増分的推論**：
 前回の計算結果を活用して効率化
-
 
 ---
 
@@ -335,11 +305,8 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 
 **確信度による判断**：
 
-
 - 確信度 > 0.9：即座に診断確定
-
 - 0.7 < 確信度 ≤ 0.9：追加検査を提案
-
 - 確信度 ≤ 0.7：他の専門医に紹介
 
 ### 自動運転システム
@@ -348,11 +315,8 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 
 **反応時間の階層**：
 
-
 - 緊急回避：100ms以内
-
 - 経路変更：1秒以内  
-
 - 目的地変更：任意時間
 
 **センサー融合の優先順位**：
@@ -373,11 +337,8 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 
 **クエリの複雑性管理**：
 
-
 - 単純クエリ：インデックス直接参照
-
 - 複雑クエリ：近似アルゴリズム使用
-
 - 超複雑クエリ：サンプリングによる推定
 
 **結果の段階的提示**：
@@ -407,25 +368,18 @@ def incremental_search(query, max_time):
 
 **思考時間の配分**：
 
-
 - 戦術的判断：フレームごと（16ms）
-
 - 戦略的計画：1秒ごと
-
 - 長期戦略：10秒ごと
 
 **近似的ゲーム木探索**：
 
-
 - モンテカルロ木探索（MCTS）
-
 - Upper Confidence bounds applied to Trees (UCT)
-
 - 制限時間内でのベスト手選択
 
 **学習と適応**：
 対戦相手の戦略を学習し、時間配分を動的調整
-
 
 ---
 
@@ -449,24 +403,15 @@ def incremental_search(query, max_time):
 
 次の第5節「非標準的アプローチ」【発展】では、これまでの伝統的な様相論理的アプローチを超えた、新しい認識論理の可能性を探求します。量子論理、動的論理、型理論など、先端的な研究分野との融合を学習します。
 
-
 ---
 
 ## 参考文献
 
-
 - Simon, H. A. (1955). A behavioral model of rational choice. *Quarterly Journal of Economics*, 69(1), 99-118.
-
 - Russell, S. J., & Wefald, E. H. (1991). *Do the Right Thing: Studies in Limited Rationality*. MIT Press.
-
 - Horvitz, E. J. (1987). Reasoning about beliefs and actions under computational resource constraints. In *Proceedings of the Third Conference on Uncertainty in Artificial Intelligence* (pp. 429-444).
-
 - Zilberstein, S. (1996). Using anytime algorithms in intelligent systems. *AI Magazine*, 17(3), 73-83.
-
 - Dean, T., & Boddy, M. (1988). An analysis of time-dependent planning. In *Proceedings of AAAI-88* (pp. 49-54).
-
 - Papadimitriou, C. H. (1994). *Computational Complexity*. Addison-Wesley.
-
 - Fagin, R., Halpern, J. Y., Moses, Y., & Vardi, M. Y. (1995). *Reasoning About Knowledge*. MIT Press.
-
 - Good, I. J. (1971). Twenty-seven principles of rationality. In V. P. Godambe & D. A. Sprott (Eds.), *Foundations of Statistical Inference* (pp. 108-141). Holt, Rinehart and Winston.

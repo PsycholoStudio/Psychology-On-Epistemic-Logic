@@ -14,7 +14,6 @@
 
     **妥当性の判定**：論理的推論の正しさを評価するための厳密な基準と、その判定手法を習得する。
 
-
 ---
 
 [前節](2-2-kripke-frames.md)でクリプキモデルの構造を学びましたが、この節では論理式の真理性を評価し、推論の妥当性を判定する方法を学習します。これらの概念は、様相論理の意味論における中核的な概念であり、論理システムの理論的基盤を提供します。
@@ -27,80 +26,80 @@
 
 ### 基本的な真理条件
 
-クリプキモデル \\(\\mathcal{M} = (W, R, V)\\) と世界 \\(w \\in W\\) において、論理式 \\(\\phi\\) の真理性 \\(\\mathcal{M}, w \\models \\phi\\) を以下のように帰納的に定義します：
+クリプキモデル \(\mathcal{M} = (W, R, V)\) と世界 \(w \in W\) において、論理式 \(\phi\) の真理性 \(\mathcal{M}, w \models \phi\) を以下のように帰納的に定義します：
 
 !!! note "定義2.3.1 —— 帰納的真理定義"
 
-    クリプキモデル \\(\\mathcal{M} = (W, R, V)\\) と世界 \\(w \\in W\\) における論理式の真理性を再帰的に定義する：
+    クリプキモデル \(\mathcal{M} = (W, R, V)\) と世界 \(w \in W\) における論理式の真理性を再帰的に定義する：
     
     この定義の基本構造は、命題変数の真理性を付値関数で直接決定する**基底ケース**と、合成式の真理性を構成要素の真理性から決定する**帰納ステップ**に分かれています。このアプローチの重要な意義は、無限に多くの複雑な式を有限の規則で体系的に評価可能にしたことです。
 
 **命題変数**：
 
-\\[\\mathcal{M}, w \\models p \\text{ iff } w \\in V(p)\\]
+\[\mathcal{M}, w \models p \text{ iff } w \in V(p)\]
 
-**解題**：モデル \\(\\mathcal{M}\\) の世界 \\(w\\) で命題変数 \\(p\\) が真であるのは、世界 \\(w\\) が付値関数 \\(V(p)\\) の元素である場合、かつその場合に限る。
+**解題**：モデル \(\mathcal{M}\) の世界 \(w\) で命題変数 \(p\) が真であるのは、世界 \(w\) が付値関数 \(V(p)\) の元素である場合、かつその場合に限る。
 
 **否定**：
 
-\\[\\mathcal{M}, w \\models \\neg \\phi \\text{ iff } \\mathcal{M}, w \\not\\models \\phi\\]
+\[\mathcal{M}, w \models \neg \phi \text{ iff } \mathcal{M}, w \not\models \phi\]
 
-**解題**：否定式 \\(\\neg \\phi\\) が世界 \\(w\\) で真であるのは、\\(\\phi\\) が \\(w\\) で真でない場合、かつその場合に限る。これは古典的な否定の意味である。
+**解題**：否定式 \(\neg \phi\) が世界 \(w\) で真であるのは、\(\phi\) が \(w\) で真でない場合、かつその場合に限る。これは古典的な否定の意味である。
 
 **連言**：
 
-\\[\\mathcal{M}, w \\models \\phi \\land \\psi \\text{ iff } \\mathcal{M}, w \\models \\phi \\text{ かつ } \\mathcal{M}, w \\models \\psi\\]
+\[\mathcal{M}, w \models \phi \land \psi \text{ iff } \mathcal{M}, w \models \phi \text{ かつ } \mathcal{M}, w \models \psi\]
 
-**解題**：連言式 \\(\\phi \\land \\psi\\) が世界 \\(w\\) で真であるのは、\\(\\phi\\) と \\(\\psi\\) の両方が \\(w\\) で真である場合、かつその場合に限る。
+**解題**：連言式 \(\phi \land \psi\) が世界 \(w\) で真であるのは、\(\phi\) と \(\psi\) の両方が \(w\) で真である場合、かつその場合に限る。
 
 **選言**：
 
-\\[\\mathcal{M}, w \\models \\phi \\lor \\psi \\text{ iff } \\mathcal{M}, w \\models \\phi \\text{ または } \\mathcal{M}, w \\models \\psi\\]
+\[\mathcal{M}, w \models \phi \lor \psi \text{ iff } \mathcal{M}, w \models \phi \text{ または } \mathcal{M}, w \models \psi\]
 
-**解題**：選言式 \\(\\phi \\lor \\psi\\) が世界 \\(w\\) で真であるのは、\\(\\phi\\) または \\(\\psi\\) の少なくとも一方が \\(w\\) で真である場合、かつその場合に限る。
+**解題**：選言式 \(\phi \lor \psi\) が世界 \(w\) で真であるのは、\(\phi\) または \(\psi\) の少なくとも一方が \(w\) で真である場合、かつその場合に限る。
 
 **含意**：
 
-\\[\\mathcal{M}, w \\models \\phi \\rightarrow \\psi \\text{ iff } \\mathcal{M}, w \\not\\models \\phi \\text{ または } \\mathcal{M}, w \\models \\psi\\]
+\[\mathcal{M}, w \models \phi \rightarrow \psi \text{ iff } \mathcal{M}, w \not\models \phi \text{ または } \mathcal{M}, w \models \psi\]
 
-**解題**：含意式 \\(\\phi \\rightarrow \\psi\\) が世界 \\(w\\) で真であるのは、\\(\\phi\\) が \\(w\\) で假であるか、\\(\\psi\\) が \\(w\\) で真である場合、かつその場合に限る。これは「前件が假なら含意は真」という古典的な原則である。
+**解題**：含意式 \(\phi \rightarrow \psi\) が世界 \(w\) で真であるのは、\(\phi\) が \(w\) で假であるか、\(\psi\) が \(w\) で真である場合、かつその場合に限る。これは「前件が假なら含意は真」という古典的な原則である。
 
 ### 様相演算子の真理条件
 
 様相演算子については、到達可能性関係を使用します：
 
-**必然性演算子** \\(\\Box\\)：
+**必然性演算子** \(\Box\)：
 
-\\[\\mathcal{M}, w \\models \\Box \\phi \\text{ iff } \\forall v \\in W (wRv \\rightarrow \\mathcal{M}, v \\models \\phi)\\]
+\[\mathcal{M}, w \models \Box \phi \text{ iff } \forall v \in W (wRv \rightarrow \mathcal{M}, v \models \phi)\]
 
-**解題**：モデル \\(\\mathcal{M}\\) の世界 \\(w\\) で必然性式 \\(\\Box \\phi\\) が真であるのは、\\(w\\) から到達可能なすべての世界 \\(v\\) で \\(\\phi\\) が真である場合、かつその場合に限る。つまり「必然的に\\(\\phi\\)」は「考えられるすべての状況で\\(\\phi\\)」を意味する。
+**解題**：モデル \(\mathcal{M}\) の世界 \(w\) で必然性式 \(\Box \phi\) が真であるのは、\(w\) から到達可能なすべての世界 \(v\) で \(\phi\) が真である場合、かつその場合に限る。つまり「必然的に\(\phi\)」は「考えられるすべての状況で\(\phi\)」を意味する。
 
-**可能性演算子** \\(\\Diamond\\)：
+**可能性演算子** \(\Diamond\)：
 
-\\[\\mathcal{M}, w \\models \\Diamond \\phi \\text{ iff } \\exists v \\in W (wRv \\land \\mathcal{M}, v \\models \\phi)\\]
+\[\mathcal{M}, w \models \Diamond \phi \text{ iff } \exists v \in W (wRv \land \mathcal{M}, v \models \phi)\]
 
-**解題**：モデル \\(\\mathcal{M}\\) の世界 \\(w\\) で可能性式 \\(\\Diamond \\phi\\) が真であるのは、\\(w\\) から到達可能な少なくとも一つの世界 \\(v\\) が存在し、その世界で \\(\\phi\\) が真である場合、かつその場合に限る。つまり「可能的に\\(\\phi\\)」は「少なくとも一つの状況で\\(\\phi\\)」を意味する。
+**解題**：モデル \(\mathcal{M}\) の世界 \(w\) で可能性式 \(\Diamond \phi\) が真であるのは、\(w\) から到達可能な少なくとも一つの世界 \(v\) が存在し、その世界で \(\phi\) が真である場合、かつその場合に限る。つまり「可能的に\(\phi\)」は「少なくとも一つの状況で\(\phi\)」を意味する。
 
 !!! info "様相演算子の記号と意味"
 
     | 記号 | 読み方 | 真理条件 |
     |------|--------|----------|
-    | \\(\\mathcal{M}, w \\models p\\) | M、w モデルズ p | 世界wで命題pが真 |
-    | \\(\\mathcal{M}, w \\models \\Box \\phi\\) | M、w モデルズ ボックス・ファイ | wから到達可能なすべての世界でφが真 |
-    | \\(\\mathcal{M}, w \\models \\Diamond \\phi\\) | M、w モデルズ ダイヤモンド・ファイ | wから到達可能な少なくとも一つの世界でφが真 |
+    | \(\mathcal{M}, w \models p\) | M、w モデルズ p | 世界wで命題pが真 |
+    | \(\mathcal{M}, w \models \Box \phi\) | M、w モデルズ ボックス・ファイ | wから到達可能なすべての世界でφが真 |
+    | \(\mathcal{M}, w \models \Diamond \phi\) | M、w モデルズ ダイヤモンド・ファイ | wから到達可能な少なくとも一つの世界でφが真 |
 
 ### 帰納的定義の意味
 
 帰納的真理定義の本質は、複雑な論理式を単純な構成要素に分解し、それらの真理性から全体の真理性を決定することです：
 
-**基底ケース**：命題変数の真理性は付値関数 \\(V\\) によって直接決定されます。
+**基底ケース**：命題変数の真理性は付値関数 \(V\) によって直接決定されます。
 **帰納ステップ**：合成された論理式の真理性は、構成要素の真理性と論理結合子の意味によって決定されます。
 
 ### 具体例による理解
 
-簡単な例で帰納的定義を適用してみましょう。論理式 \\(\\Box(p \\rightarrow q) \\land \\Diamond p\\) について：
+簡単な例で帰納的定義を適用してみましょう。論理式 \(\Box(p \rightarrow q) \land \Diamond p\) について：
 
-この評価プロセスは以下のように進行します。まず主要結合子が \\(\\land\\) であることを認識し、\\(\\Box(p \\rightarrow q)\\) と \\(\\Diamond p\\) の両方が真でなければならないことを确認します。次に、\\(\\Box(p \\rightarrow q)\\) については到達可能なすべての世界で \\(p \\rightarrow q\\) が真であるかどうかを評価し、\\(\\Diamond p\\) については到達可能な少なくとも一つの世界で \\(p\\) が真であるかどうかを評価します。最後に、これら两条件がともに満たされる場合にのみ、全体の論理式が真と判定されます。
+この評価プロセスは以下のように進行します。まず主要結合子が \(\land\) であることを認識し、\(\Box(p \rightarrow q)\) と \(\Diamond p\) の両方が真でなければならないことを确認します。次に、\(\Box(p \rightarrow q)\) については到達可能なすべての世界で \(p \rightarrow q\) が真であるかどうかを評価し、\(\Diamond p\) については到達可能な少なくとも一つの世界で \(p\) が真であるかどうかを評価します。最後に、これら两条件がともに満たされる場合にのみ、全体の論理式が真と判定されます。
 
 ### 自然言語での理解
 
@@ -108,10 +107,9 @@
 
 **複合的な条件の分析**：「雨が降っていて、かつ風が強い」のような複合条件を、各構成要素（「雨が降っている」「風が強い」）の真偽から全体の真偽を決定します。
 
-**条件文の解釈**：「もし明日晴れなら、必ず散歩に行く」という日常的な条件文を \\(\\text{晴れ} \\rightarrow \\Box \\text{散歩}\\) として形式化し、各要素の真理条件を明確化できます。
+**条件文の解釈**：「もし明日晴れなら、必ず散歩に行く」という日常的な条件文を \(\text{晴れ} \rightarrow \Box \text{散歩}\) として形式化し、各要素の真理条件を明確化できます。
 
 **段階的な推論**：複雑な推論を、より単純な推論ステップの積み重ねとして理解し、各段階での論理的正当性を検証できます。
-
 
 ---
 
@@ -123,9 +121,9 @@
 
 ### 局所的真理
 
-**定義**：論理式 \\(\\phi\\) が特定のモデル \\(\\mathcal{M}\\) の特定の世界 \\(w\\) で真であることを**局所的真理**といいます。
+**定義**：論理式 \(\phi\) が特定のモデル \(\mathcal{M}\) の特定の世界 \(w\) で真であることを**局所的真理**といいます。
 
-記法：\\(\\mathcal{M}, w \\models \\phi\\)
+記法：\(\mathcal{M}, w \models \phi\)
 
 **特徴**：
 
@@ -133,9 +131,9 @@
 
 ### 大域的真理
 
-**定義**：論理式 \\(\\phi\\) がモデル \\(\\mathcal{M}\\) のすべての世界で真であることを**大域的真理**といいます。
+**定義**：論理式 \(\phi\) がモデル \(\mathcal{M}\) のすべての世界で真であることを**大域的真理**といいます。
 
-記法：\\(\\mathcal{M} \\models \\phi \\text{ iff } \\forall w \\in W (\\mathcal{M}, w \\models \\phi)\\)
+記法：\(\mathcal{M} \models \phi \text{ iff } \forall w \in W (\mathcal{M}, w \models \phi)\)
 
 **特徴**：
 
@@ -145,8 +143,8 @@
 
     | 概念 | 記法 | 意味 | 心理学的対応 |
     |------|------|------|--------------|
-    | 局所的真理 | \\(\\mathcal{M}, w \\models \\phi\\) | 特定の世界wでφが真 | 特定状況での心理状態 |
-    | 大域的真理 | \\(\\mathcal{M} \\models \\phi\\) | すべての世界でφが真 | 普遍的心理法則 |
+    | 局所的真理 | \(\mathcal{M}, w \models \phi\) | 特定の世界wでφが真 | 特定状況での心理状態 |
+    | 大域的真理 | \(\mathcal{M} \models \phi\) | すべての世界でφが真 | 普遍的心理法則 |
 
 ### 妥当性との関係
 
@@ -154,9 +152,9 @@
 
 !!! note "定義2.3.2 —— 妥当性"
 
-    **妥当性**：論理式 \\(\\phi\\) が妥当である \\(\\models \\phi\\) ↔ すべてのクリプキモデル \\(\\mathcal{M}\\) で \\(\\mathcal{M} \\models \\phi\\)
+    **妥当性**：論理式 \(\phi\) が妥当である \(\models \phi\) ↔ すべてのクリプキモデル \(\mathcal{M}\) で \(\mathcal{M} \models \phi\)
     
-    **記法**：\\(\\models \\phi \\text{ iff } \\forall \\mathcal{M} (\\mathcal{M} \\models \\phi)\\)
+    **記法**：\(\models \phi \text{ iff } \forall \mathcal{M} (\mathcal{M} \models \phi)\)
     
     **意味**：妥当な論理式は、あらゆる可能な状況で普遍的に成立する絶対的真理である
 
@@ -167,10 +165,10 @@
 以下の例で両概念の違いを確認しましょう：
 
 **局所的真理の例**：
-論理式 \\(p\\)（「今日は雨」）について、現実世界では \\(\\mathcal{M}_{real}, w_{today} \\models p\\) が真かもしれませんが、他の可能世界や他の日では偽になります。
+論理式 \(p\)（「今日は雨」）について、現実世界では \(\mathcal{M}_{real}, w_{today} \models p\) が真かもしれませんが、他の可能世界や他の日では偽になります。
 
 **大域的真理の例**：
-論理式 \\(p \\lor \\neg p\\)（排中律）について、任意のモデルのすべての世界で真となるため、\\(\\mathcal{M} \\models p \\lor \\neg p\\) が成り立ちます。
+論理式 \(p \lor \neg p\)（排中律）について、任意のモデルのすべての世界で真となるため、\(\mathcal{M} \models p \lor \neg p\) が成り立ちます。
 
 ### 日常的な例による理解
 
@@ -179,7 +177,7 @@
 
 **文脈依存性の表現**：
 多くの命題は文脈依存的です。「静かである」という命題も、図書館では真、工事現場では偽になる可能性があります：
-図書館の世界 \\(w_1\\) では \\(\\mathcal{M}, w_1 \\models \\text{静か}\\) が成り立ち、工事現場の世界 \\(w_2\\) では \\(\\mathcal{M}, w_2 \\not\\models \\text{静か}\\) となります。
+図書館の世界 \(w_1\) では \(\mathcal{M}, w_1 \models \text{静か}\) が成り立ち、工事現場の世界 \(w_2\) では \(\mathcal{M}, w_2 \not\models \text{静か}\) となります。
 
 **条件の効果**：
 条件の効果も、この区別で分析できます：
@@ -193,7 +191,6 @@
 
 **論理法則の性質**：異なる論理的文脈で得られた結論を統合する際、局所的真理を大域的真理へと拡張する論理的根拠を明確化できます。
 
-
 ---
 
 ## 2.3.3 完全性と健全性
@@ -206,19 +203,13 @@
 **料理レシピの信頼性で考えてみましょう**：
 
 **健全性（レシピの信頼性）**：「レシピ通りに作れば必ず美味しい料理ができる」
-
 - もしレシピ本に載っている手順があったら、それは実際に美味しい料理が作れる方法でなければいけません
-
 - 間違ったレシピが「完璧な手順」として載っていては困りますね
-
 - 論理では：「証明できる式は必ず正しい」
 
 **完全性（レシピの網羅性）**：「美味しい料理は必ずレシピで作れる」
-
 - 逆に、本当に美味しい料理なら、どこかにレシピが存在するはずです
-
 - レシピで表現できない美味しい料理があったら、そのレシピ集は不完全ということになります
-
 - 論理では：「正しい式は必ず証明できる」
 
 **数学の教科書の例**：
@@ -233,9 +224,9 @@
 
 !!! abstract "定義2.3.3 —— 健全性と完全性"
 
-    **健全性（Soundness）**：\\(\\mathcal{L} \\vdash \\phi \\Rightarrow \\models \\phi\\) — 証明可能な論理式は必ず妥当である
+    **健全性（Soundness）**：\(\mathcal{L} \vdash \phi \Rightarrow \models \phi\) — 証明可能な論理式は必ず妥当である
     
-    **完全性（Completeness）**：\\(\\models \\phi \\Rightarrow \\mathcal{L} \\vdash \\phi\\) — 妥当な論理式は必ず証明可能である
+    **完全性（Completeness）**：\(\models \phi \Rightarrow \mathcal{L} \vdash \phi\) — 妥当な論理式は必ず証明可能である
     
     **意義**：健全性は理論の信頼性を、完全性は理論の完全さを保証する
 
@@ -245,8 +236,8 @@
 
     | 概念 | 記号的表現 | 意味 |
     |------|------------|------|
-    | 健全性 | \\(\\mathcal{L} \\vdash \\phi \\Rightarrow \\models \\phi\\) | 証明可能なら妥当 |
-    | 完全性 | \\(\\models \\phi \\Rightarrow \\mathcal{L} \\vdash \\phi\\) | 妥当なら証明可能 |
+    | 健全性 | \(\mathcal{L} \vdash \phi \Rightarrow \models \phi\) | 証明可能なら妥当 |
+    | 完全性 | \(\models \phi \Rightarrow \mathcal{L} \vdash \phi\) | 妥当なら証明可能 |
 
 ### クリプキ意味論の完全性定理
 
@@ -261,7 +252,6 @@
 **理論の完全性**：完全性は、理論の記述力の完全さを意味します。意味論的に妥当なすべての論理式が、証明論的にも導出可能でなければなりません。
 
 健全性と完全性の成立により、「証明できること」と「意味論的に正しいこと」が完全に一致し、論理システムの理論的基盤が確立されます。
-
 
 ---
 
@@ -283,7 +273,6 @@
 
 **制限された証明探索**：完全な証明探索の代わりに、制限された深さでの証明探索や、ヒューリスティックに基づく証明戦略が実際のシステムでは採用されます。
 
-
 ---
 
 ## まとめ
@@ -302,22 +291,14 @@
 
 次の第3章では、様相論理の様々な体系（K、T、S4、S5など）とその公理的特徴付けを学習し、異なる様相概念に対応する論理システムの構築方法を習得します。
 
-
 ---
 
 ## 参考文献
 
-
 - Blackburn, P., de Rijke, M., & Venema, Y. (2001). *Modal Logic*. Cambridge University Press.
-
 - Chellas, B. F. (1980). *Modal Logic: An Introduction*. Cambridge University Press.
-
 - Fagin, R., Halpern, J. Y., Moses, Y., & Vardi, M. Y. (1995). *Reasoning About Knowledge*. MIT Press.
-
 - Goldblatt, R. (1992). *Logics of Time and Computation* (2nd ed.). CSLI Publications.
-
 - Hughes, G. E., & Cresswell, M. J. (1996). *A New Introduction to Modal Logic*. Routledge.
-
 - Kripke, S. A. (1963). Semantical considerations on modal logic. *Acta Philosophica Fennica*, 16, 83-94.
-
 - van Benthem, J. (2010). *Modal Logic for Open Minds*. CSLI Publications.

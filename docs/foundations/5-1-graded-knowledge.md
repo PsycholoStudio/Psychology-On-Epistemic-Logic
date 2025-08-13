@@ -173,7 +173,7 @@
 **収束定理**：十分な証拠により、知識度は真の値に収束
 
 \[\lim_{n \to \infty} \kappa_n(\varphi) = \begin{cases}
-1 & \text{if } \varphi \text{ is true}\\
+1 & \text{if } \varphi \text{ is true}\
 0 & \text{if } \varphi \text{ is false}
 \end{cases}\]
 

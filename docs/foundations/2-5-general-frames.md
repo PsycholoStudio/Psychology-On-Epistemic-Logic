@@ -12,7 +12,6 @@
     
     **論理的応用の拡張**：制約論理、計算論理、形式検証等の様々な領域で、一般フレーム理論の概念が強力な分析道具として機能する。
 
-
 ---
 
 **注意**：この節は発展的内容を含みます。第2章の基本内容を十分理解してから取り組むことを推奨します。
@@ -23,7 +22,7 @@
 
 ### 標準フレームの限界
 
-標準的なクリプキフレーム \\((W, R)\\) では、任意の世界部分集合を命題の外延として選択できます。しかし、実際の論理システムや計算的応用では、すべての論理的可能性が実装可能とは限りません。論理システムには様々な制約があり、理想化された論理的可能性とは異なる実用的な制限の下で動作しています。
+標準的なクリプキフレーム \((W, R)\) では、任意の世界部分集合を命題の外延として選択できます。しかし、実際の論理システムや計算的応用では、すべての論理的可能性が実装可能とは限りません。論理システムには様々な制約があり、理想化された論理的可能性とは異なる実用的な制限の下で動作しています。
 
 **問題例：スマートフォンアプリの制限で考える**：
 
@@ -41,32 +40,31 @@
 
 !!! note "定義2.5.1 —— 一般フレーム"
 
-    **一般フレーム**：三つ組 \\(\\mathcal{F} = (W, R, \\mathcal{P})\\) であり、以下の成分から構成される：
+    **一般フレーム**：三つ組 \(\mathcal{F} = (W, R, \mathcal{P})\) であり、以下の成分から構成される：
     
-    - \\(W\\):空でない世界の集合
-    - \\(R \\subseteq W \\times W\\):到達可能性関係
-    - \\(\\mathcal{P} \\subseteq \\mathcal{P}(W)\\):許容可能な命題の集合
+    - \(W\):空でない世界の集合
+    - \(R \subseteq W \times W\):到達可能性関係
+    - \(\mathcal{P} \subseteq \mathcal{P}(W)\):許容可能な命題の集合
     
     **意義**：標準フレームに許容可能な命題の制約を加え、現実的な論理システムをモデル化
 
-**制約条件**：\\(\\mathcal{P}\\) は以下を満たす必要があります：
+**制約条件**：\(\mathcal{P}\) は以下を満たす必要があります：
 
 1. **ブール代数**：補集合、和集合、積集合について閉じている
 2. **複合性条件**：様相演算子の適用について適切な条件を満たす
 
 | 記号 | 読み方 | 意味 |
 |------|--------|------|
-| \\(\\mathcal{F} = (W, R, \\mathcal{P})\\) | 一般フレーム | 世界、関係、許容命題の三つ組 |
-| \\(\\mathcal{P}\\) | 許容可能命題集合 | 区別可能な命題の制約された集合 |
-| \\(\\mathcal{P}(W)\\) | べき集合 | Wのすべての部分集合 |
+| \(\mathcal{F} = (W, R, \mathcal{P})\) | 一般フレーム | 世界、関係、許容命題の三つ組 |
+| \(\mathcal{P}\) | 許容可能命題集合 | 区別可能な命題の制約された集合 |
+| \(\mathcal{P}(W)\) | べき集合 | Wのすべての部分集合 |
 
 ### 標準フレームとの比較
 
-**標準フレーム**：\\(\\mathcal{P} = \\mathcal{P}(W)\\)（すべての部分集合が許容可能）
-**一般フレーム**：\\(\\mathcal{P} \\subsetneq \\mathcal{P}(W)\\)（制約された部分集合のみ許容可能）
+**標準フレーム**：\(\mathcal{P} = \mathcal{P}(W)\)（すべての部分集合が許容可能）
+**一般フレーム**：\(\mathcal{P} \subsetneq \mathcal{P}(W)\)（制約された部分集合のみ許容可能）
 
 この制約により、現実的な論理システムの限界をより適切にモデル化できます。
-
 
 ---
 
@@ -76,15 +74,15 @@
 
 !!! abstract "定義2.5.2 —— 持続性"
 
-    **持続性**：一般フレーム \\(\\mathcal{F} = (W, R, \\mathcal{P})\\) が**持続性**を満たす
+    **持続性**：一般フレーム \(\mathcal{F} = (W, R, \mathcal{P})\) が**持続性**を満たす
     
-    **数学的条件**：\\(\\forall X \\in \\mathcal{P}, \\forall w \\in W: \\{v \\in W : wRv \\land v \\in X\\} \\in \\mathcal{P}\\)
+    **数学的条件**：\(\forall X \in \mathcal{P}, \forall w \in W: \{v \in W : wRv \land v \in X\} \in \mathcal{P}\)
     
     **意味**：可能性演算子の適用に関して闉じている
 
-\\[\\forall X \\in \\mathcal{P}, \\forall w \\in W: \\{v \\in W : wRv \\land v \\in X\\} \\in \\mathcal{P}\\]
+\[\forall X \in \mathcal{P}, \forall w \in W: \{v \in W : wRv \land v \in X\} \in \mathcal{P}\]
 
-**解題**：この式は「許容可能な命題集合 \\(\\mathcal{P}\\) の任意の要素 X と世界集合 W の任意の世界 w について、w から到達可能でかつ X に含まれる世界 v の集合もまた \\(\\mathcal{P}\\) に含まれる」ことを意味します。つまり、可能性演算子の適用に関して闉じているということです。
+**解題**：この式は「許容可能な命題集合 \(\mathcal{P}\) の任意の要素 X と世界集合 W の任意の世界 w について、w から到達可能でかつ X に含まれる世界 v の集合もまた \(\mathcal{P}\) に含まれる」ことを意味します。つまり、可能性演算子の適用に関して闉じているということです。
 
 **直観的意味**：許容可能な命題について、「到達可能な世界での真理性」も許容可能でなければなりません。
 
@@ -94,15 +92,15 @@
 
 !!! abstract "定義2.5.3 —— 単調性"
 
-    **単調性**：一般フレーム \\(\\mathcal{F}\\) が**単調性**を満たす
+    **単調性**：一般フレーム \(\mathcal{F}\) が**単調性**を満たす
     
-    **数学的条件**：\\(\\forall X \\in \\mathcal{P}, \\forall w \\in W: \\{v \\in W : wRv \\rightarrow v \\in X\\} \\in \\mathcal{P}\\)
+    **数学的条件**：\(\forall X \in \mathcal{P}, \forall w \in W: \{v \in W : wRv \rightarrow v \in X\} \in \mathcal{P}\)
     
     **意味**：必然性演算子の適用に関して闉じている
 
-\\[\\forall X \\in \\mathcal{P}, \\forall w \\in W: \\{v \\in W : wRv \\rightarrow v \\in X\\} \\in \\mathcal{P}\\]
+\[\forall X \in \mathcal{P}, \forall w \in W: \{v \in W : wRv \rightarrow v \in X\} \in \mathcal{P}\]
 
-**解題**：この式は「許容可能な命題集合 \\(\\mathcal{P}\\) の任意の要素 X と世界集合 W の任意の世界 w について、w から到達可能なすべての世界 v が X に含まれるという条件を満たす世界の集合もまた \\(\\mathcal{P}\\) に含まれる」ことを意味します。つまり、必然性演算子の適用に関して闉じているということです。
+**解題**：この式は「許容可能な命題集合 \(\mathcal{P}\) の任意の要素 X と世界集合 W の任意の世界 w について、w から到達可能なすべての世界 v が X に含まれるという条件を満たす世界の集合もまた \(\mathcal{P}\) に含まれる」ことを意味します。つまり、必然性演算子の適用に関して闉じているということです。
 
 **直観的意味**：許容可能な命題について、「到達可能なすべての世界での真理性」も許容可能でなければなりません。
 
@@ -121,7 +119,6 @@
 
 **表現制約**：形式言語で表現可能な概念の範囲は、持続性と単調性によって制約されます。
 
-
 ---
 
 ## 2.5.3 正準一般フレーム
@@ -131,21 +128,21 @@
 与えられた論理体系Lに対して、**正準一般フレーム**を以下のように構成できます：
 
 **ステップ1：極大無矛盾集合**
-\\[W^c = \\{\\Gamma : \\Gamma \\text{はLについて極大無矛盾}\\}\\]
+\[W^c = \{\Gamma : \Gamma \text{はLについて極大無矛盾}\}\]
 
 **ステップ2：到達可能性関係**
-\\[\\Gamma R^c \\Delta \\text{ iff } \\{\\phi : \\Box \\phi \\in \\Gamma\\} \\subseteq \\Delta\\]
+\[\Gamma R^c \Delta \text{ iff } \{\phi : \Box \phi \in \Gamma\} \subseteq \Delta\]
 
 **ステップ3：許容可能命題**
-\\[\\mathcal{P}^c = \\{|\\phi|^c : \\phi \\text{はLの論理式}\\}\\]
-ここで \\(|\\phi|^c = \\{\\Gamma \\in W^c : \\phi \\in \\Gamma\\}\\)
+\[\mathcal{P}^c = \{|\phi|^c : \phi \text{はLの論理式}\}\]
+ここで \(|\phi|^c = \{\Gamma \in W^c : \phi \in \Gamma\}\)
 
 ### 完全性定理
 
 **定理 2.5.1**（一般フレーム完全性）：論理体系Lについて、以下が同値です：
 
-1. \\(L \\vdash \\phi\\)（Lで \\(\\phi\\) が証明可能）
-2. \\(\\mathcal{F}^c \\models \\phi\\)（正準一般フレームで \\(\\phi\\) が妥当）
+1. \(L \vdash \phi\)（Lで \(\phi\) が証明可能）
+2. \(\mathcal{F}^c \models \phi\)（正準一般フレームで \(\phi\) が妥当）
 
 この定理により、一般フレーム意味論の数学的基盤が確立されます。
 
@@ -154,7 +151,6 @@
 **定理 2.5.2**：任意の一般フレームは、適切な論理体系の正準一般フレームに埋め込むことができます。
 
 これにより、一般フレーム理論と論理体系の理論が密接に対応することが保証されます。
-
 
 ---
 
@@ -168,22 +164,22 @@
 
 **形式言語の制約**：システムが使用する形式言語の構文は有限であり、表現可能な概念に制約を課します。
 
-\\[\\mathcal{P}_{\\text{syntactic}} = \\{X \\subseteq W : X \\text{ は構文で表現可能}\\}\\]
+\[\mathcal{P}_{\text{syntactic}} = \{X \subseteq W : X \text{ は構文で表現可能}\}\]
 
 ### 計算的制約
 
 **計算資源の限界**：同時に処理可能な概念数には限界があります。
 
-\\[\\mathcal{P}_{\\text{computational}} = \\{X \\subseteq W : |X| \\leq k\\}\\] 
+\[\mathcal{P}_{\text{computational}} = \{X \subseteq W : |X| \leq k\}\] 
 （kは計算的制約定数）
 
 ### 階層的制約
 
 **論理体系の階層性**：論理体系の拡張は、各段階で利用可能な概念集合として形式化できます。
 
-**命題論理**：\\(\\mathcal{P}_{\\text{propositional}} \\subset \\mathcal{P}_{\\text{predicate}}\\)
-**述語論理**：\\(\\mathcal{P}_{\\text{predicate}} \\subset \\mathcal{P}_{\\text{modal}}\\)
-**様相論理**：\\(\\mathcal{P}_{\\text{modal}}\\)
+**命題論理**：\(\mathcal{P}_{\text{propositional}} \subset \mathcal{P}_{\text{predicate}}\)
+**述語論理**：\(\mathcal{P}_{\text{predicate}} \subset \mathcal{P}_{\text{modal}}\)
+**様相論理**：\(\mathcal{P}_{\text{modal}}\)
 
 !!! note "論理制約の種類と形式化"
 
@@ -197,14 +193,13 @@
 
 **共有論理空間**：分散システム内で共有される論理の範囲を一般フレームとして表現できます。
 
-\\[\\mathcal{P}_{\\text{shared}} = \\bigcap_{i \\in \\text{System}} \\mathcal{P}_i\\]
+\[\mathcal{P}_{\text{shared}} = \bigcap_{i \in \text{System}} \mathcal{P}_i\]
 
-**解題**：この式は「共有される許容可能な命題集合は、システム内のすべてのコンポーネント i の許容可能な命題集合 \\(\\mathcal{P}_i\\) の積集合（共通部分）である」ことを意味します。つまり、すべてのコンポーネントが共通して許容できる概念のみが共有論理空間に含まれるということです。
+**解題**：この式は「共有される許容可能な命題集合は、システム内のすべてのコンポーネント i の許容可能な命題集合 \(\mathcal{P}_i\) の積集合（共通部分）である」ことを意味します。つまり、すべてのコンポーネントが共通して許容できる概念のみが共有論理空間に含まれるということです。
 
 **実装制約**：実装環境によって「実現可能」な概念の範囲が異なることを表現できます。
 
 **専門化**：特定の応用分野における論理体系を、制約された許容可能命題集合として理解できます。
-
 
 ---
 
@@ -214,11 +209,11 @@
 
 **概念空間の拡張**：論理体系の発展過程を、許容可能命題集合の段階的拡張として理解できます。
 
-\\[\\mathcal{P}_0 \\subset \\mathcal{P}_1 \\subset \\mathcal{P}_2 \\subset \\cdots\\]
+\[\mathcal{P}_0 \subset \mathcal{P}_1 \subset \mathcal{P}_2 \subset \cdots\]
 
-**解題**：この式は「論理体系の発展に伴って、許容可能な命題集合が段階的に拡大していく」ことを意味します。初期段階 \\(\\mathcal{P}_0\\) で表現可能な概念は、後の段階でもすべて表現可能であり、体系が発展するにつれて新しい概念が追加されていくことを表します。
+**解題**：この式は「論理体系の発展に伴って、許容可能な命題集合が段階的に拡大していく」ことを意味します。初期段階 \(\mathcal{P}_0\) で表現可能な概念は、後の段階でもすべて表現可能であり、体系が発展するにつれて新しい概念が追加されていくことを表します。
 
-各段階 \\(\\mathcal{P}_i\\) は、その時点で論理体系において表現可能な概念の集合を表現します。
+各段階 \(\mathcal{P}_i\) は、その時点で論理体系において表現可能な概念の集合を表現します。
 
 ### 論理革新の形式化
 
@@ -230,10 +225,9 @@
 
 **公理系の限界**：ゲーデルの不完全性定理に見られる論理体系の限界を、制約された許容可能命題集合として表現できます。
 
-\\[\\mathcal{P}_{\\text{complete}} = \\{X \\in \\mathcal{P} : X \\text{ は決定可能}\\}\\]
+\[\mathcal{P}_{\text{complete}} = \{X \in \mathcal{P} : X \text{ は決定可能}\}\]
 
 **非標準モデル**：概念の解釈における多様性を、許容可能命題集合の構造的変化として理解できます。
-
 
 ---
 
@@ -255,20 +249,13 @@
 
 これらの基礎の上に、次章以降では様相論理の心理学への具体的応用を探求していきます。認知心理学、社会心理学、発達心理学、臨床心理学の各分野において、様相論理的分析がどのように研究の理論化と精密化に貢献できるかを詳しく検討していきます。
 
-
 ---
 
 ## 参考文献
 
-
 - Goldblatt, R. (1992). *Logics of Time and Computation* (2nd ed.). CSLI Publications.
-
 - van Benthem, J. (2010). *Modal Logic for Open Minds*. CSLI Publications.
-
 - Blackburn, P., de Rijke, M., & Venema, Y. (2001). *Modal Logic*. Cambridge University Press.
-
 - Piaget, J. (1952). *The Origins of Intelligence in Children*. International Universities Press.
-
 - Vygotsky, L. S. (1978). *Mind in Society: The Development of Higher Psychological Processes*. Harvard University Press.
-
 - Karmiloff-Smith, A. (1992). *Beyond Modularity: A Developmental Perspective on Cognitive Science*. MIT Press.
