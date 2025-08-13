@@ -12,6 +12,7 @@
     
     **双方向の分析**：公理からフレーム条件を、フレーム条件から公理を導出する方法により、様相論理の理解が深まる。
 
+
 ---
 
 [前節](3-3-proof-theory.md)までで様相論理の証明論を学びましたが、この節では、構文論と意味論を結ぶ最も美しい理論の一つである**対応理論**（Correspondence Theory）を探求します。この理論は、抽象的な論理公理と具体的な数学的構造の間の驚くべき関係を明らかにします。
@@ -42,6 +43,7 @@
 
 第三に、**論理体系の分類**が可能になります。公理の組み合わせとフレームクラスの対応により、様相論理の風景を体系的に理解できます。
 
+
 ---
 
 ## 3.4.2 基本的な対応関係
@@ -54,15 +56,15 @@
 
     | 公理 | 公理の名前 | フレーム条件 | 条件の名前 |
     |------|------------|--------------|------------|
-    | □p → p | T公理 | ∀w(wRw) | 反射性 |
-    | □p → □□p | 4公理 | ∀w,v,u(wRv ∧ vRu → wRu) | 推移性 |
-    | p → □◇p | B公理 | ∀w,v(wRv → vRw) | 対称性 |
-    | □p → ◇p | D公理 | ∀w∃v(wRv) | 系列性 |
-    | ◇p → □◇p | 5公理 | ∀w,v,u(wRv ∧ wRu → vRu) | ユークリッド性 |
+    | \(\Box p \to p\) | T公理 | \(\forall w(wRw)\) | 反射性 |
+    | \(\Box p \to \Box\Box p\) | 4公理 | \(\forall w,v,u(wRv \land vRu \to wRu)\) | 推移性 |
+    | \(p \to \Box\Diamond p\) | B公理 | \(\forall w,v(wRv \to vRw)\) | 対称性 |
+    | \(\Box p \to \Diamond p\) | D公理 | \(\forall w\exists v(wRv)\) | 系列性 |
+    | \(\Diamond p \to \Box\Diamond p\) | 5公理 | \(\forall w,v,u(wRv \land wRu \to vRu)\) | ユークリッド性 |
 
 ### T公理と反射性の対応証明
 
-T公理 □p → p が反射性と対応することを詳しく証明してみましょう。この証明は、対応理論の基本的な手法を理解する上で重要です。
+T公理 \(\Box p \to p\) が反射性と対応することを詳しく証明してみましょう。この証明は、対応理論の基本的な手法を理解する上で重要です。
 
 **健全性の方向**（反射性 ⇒ T公理の妥当性）：フレーム \(F = \langle W, R \rangle\) が反射的であるとします。任意のモデル \(M = \langle F, V \rangle\) と世界 \(w \in W\) を考えます。\(M, w \vDash \Box p\) と仮定すると、\(w\)から到達可能なすべての世界で\(p\)が真となります。反射性により \(wRw\) なので、\(w\)自身でも\(p\)が真でなければなりません。したがって \(M, w \vDash p\) となり、T公理が妥当です。
 
@@ -79,6 +81,7 @@ T公理 □p → p が反射性と対応することを詳しく証明してみ�
 **S5 = T + 5**（または S4 + 5）の場合、同値関係が対応します。同値関係は反射性、対称性、推移性をすべて満たし、可能世界を完全に分離されたクラスに分割します。
 
 これらの複合的な対応は、単純な対応の組み合わせ以上の意味を持ちます。例えば、S5の同値関係は、各同値類内で完全な相互到達可能性を保証し、これが S5 における様相の崩壊現象と密接に関連しています。
+
 
 ---
 
@@ -119,6 +122,7 @@ Henrik Sahlqvist（サールクヴィスト）による画期的な定理は、�
 サールクヴィストの定理は強力ですが、すべての対応を捉えるわけではありません。サールクヴィスト公式でない公式の中にも、フレーム条件と対応するものがあります。
 
 例えば、McKinsey公式 □◇p → ◇□p は、サールクヴィスト公式ではありませんが、特定のフレーム条件（無限深さの不在）と対応します。このような非サールクヴィスト対応の研究は、現在も活発な研究分野です。
+
 
 ---
 
@@ -163,6 +167,7 @@ Robert Goldblatt と Steven Thomason による定理は、様相論理で定義�
 
 **複合的構成**：複雑なフレーム条件を単純な条件の組み合わせとして表現し、それぞれに対応する公理を組み合わせます。
 
+
 ---
 
 ## 3.4.5 対応理論の応用
@@ -197,6 +202,7 @@ Robert Goldblatt と Steven Thomason による定理は、様相論理で定義�
     4. **体系の構築**：対応する公理から論理体系を構成
     5. **検証と調整**：実際の応用で体系を検証し、必要に応じて調整
 
+
 ---
 
 ## まとめ
@@ -215,13 +221,20 @@ Robert Goldblatt と Steven Thomason による定理は、様相論理で定義�
 
 次の第5節「証明論的意味論」【発展】では、証明そのものから意味を構成するという、より高度なアプローチを学習します。これにより、様相論理の意味論的基礎をさらに深く理解することができます。
 
+
 ---
 
 ## 参考文献
 
+
 - Blackburn, P., de Rijke, M., & Venema, Y. (2001). *Modal Logic*. Cambridge University Press.
+
 - van Benthem, J. (1984). Correspondence theory. In D. Gabbay & F. Guenthner (Eds.), *Handbook of Philosophical Logic* (Vol. 2, pp. 167-247). Reidel.
+
 - Goldblatt, R., & Thomason, S. K. (1974). Axiomatic classes in propositional modal logic. In J. Crossley (Ed.), *Algebraic Logic* (pp. 163-173). Springer.
+
 - Sahlqvist, H. (1975). Completeness and correspondence in the first and second order semantics for modal logic. In S. Kanger (Ed.), *Proceedings of the Third Scandinavian Logic Symposium* (pp. 110-143). North-Holland.
+
 - Kracht, M. (1999). *Tools and Techniques in Modal Logic*. Elsevier.
+
 - Venema, Y. (2007). Algebras and coalgebras. In P. Blackburn, J. van Benthem, & F. Wolter (Eds.), *Handbook of Modal Logic* (pp. 331-426). Elsevier.

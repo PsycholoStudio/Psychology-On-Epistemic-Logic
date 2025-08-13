@@ -26,33 +26,33 @@
 
 !!! note "定義1.4.1 —— 本質主義の形式化"
 
-    **本質的性質**：対象xが性質Pを本質的に持つ ⟺ \\(\\Box P(x)\\)（必然的にxはPを持つ）
+    **本質的性質**：対象xが性質Pを本質的に持つ ⟺ \(\Box P(x)\)（必然的にxはPを持つ）
     
-    **偶然的性質**：対象xが性質Qを偶然的に持つ ⟺ \\(P(x) \\land \\Diamond \\neg P(x)\\)（実際にはPを持つが、持たない可能性もある）
+    **偶然的性質**：対象xが性質Qを偶然的に持つ ⟺ \(P(x) \land \Diamond \neg P(x)\)（実際にはPを持つが、持たない可能性もある）
     
-    **例**：「水は本質的にH₂O」⟺ \\(\\Box \\forall x (\\text{Water}(x) \\rightarrow \\text{H₂O}(x))\\)
+    **例**：「水は本質的にH₂O」⟺ \(\Box \forall x (\text{Water}(x) \rightarrow \text{H₂O}(x))\)
 
-**本質主義（Essentialism）**の現代的形式化において、対象 \\(x\\) が本質的に性質 \\(P\\) を持つということは、\\(\\Box P(x)\\)（必然的に \\(x\\) は \\(P\\) を持つ）として表現されます。例えば、「水は本質的に H₂O である」という主張は、\\(\\Box \\forall x (\\text{Water}(x) \\rightarrow \\text{H₂O}(x))\\) として形式化できます。
+**本質主義（Essentialism）**の現代的形式化において、対象 \(x\) が本質的に性質 \(P\) を持つということは、\(\Box P(x)\)（必然的に \(x\) は \(P\) を持つ）として表現されます。例えば、「水は本質的に H₂O である」という主張は、\(\Box \forall x (\text{Water}(x) \rightarrow \text{H₂O}(x))\) として形式化できます。
 
 この形而上学的分析は、科学的分類や概念定義において重要な理論的基盤となります。化学における物質の本質的構造、生物学における種の本質的特徴、数学における概念の必然的性質など、様相論理による形式化は学問分野を横断して応用されています。
 
 ### 認識論への応用
 
-**認識論（Epistemology）**では、知識の本質、正当化、確実性といった問題が様相論理によって分析されます。認識論理（Epistemic Logic）は、知識演算子 \\(K\\) と信念演算子 \\(B\\) を導入して、認識状態を形式的に扱います。
+**認識論（Epistemology）**では、知識の本質、正当化、確実性といった問題が様相論理によって分析されます。認識論理（Epistemic Logic）は、知識演算子 \(K\) と信念演算子 \(B\) を導入して、認識状態を形式的に扱います。
 
 !!! note "定義1.4.2 —— 認識論理の基本体系"
 
-    **知識演算子**：\\(K_a p\\) = エージェント a が p を知っている
+    **知識演算子**：\(K_a p\) = エージェント a が p を知っている
     
-    **信念演算子**：\\(B_a p\\) = エージェント a が p を信じている
+    **信念演算子**：\(B_a p\) = エージェント a が p を信じている
     
     **基本公理**：
     
-    - **T公理（知識の真理性）**：\\(K_a p \\rightarrow p\\)
+    - **T公理（知識の真理性）**：\(K_a p \rightarrow p\)
       「知っていることは真である」
-    - **4公理（正の内省）**：\\(K_a p \\rightarrow K_a K_a p\\)
+    - **4公理（正の内省）**：\(K_a p \rightarrow K_a K_a p\)
       「知っていることを知っている」
-    - **5公理（負の内省）**：\\(\\neg K_a p \\rightarrow K_a \\neg K_a p\\)
+    - **5公理（負の内省）**：\(\neg K_a p \rightarrow K_a \neg K_a p\)
       「知らないことを知っている」
 
 これらの公理は、理想的な知識の性質を表しています。T公理は知識と真理の本質的な結びつきを示し、4公理と5公理は完全な自己認識を表現しています。実際の人間の認識はこれらの理想から逸脱することがあり、それが認知バイアスや誤謬の源となります。
@@ -65,18 +65,18 @@
     
     **状況設定**：
     
-    - Smith は「Jones が仕事を得る」（\\(p\\)）と信じている
-    - Smith は「Jones のポケットに10枚のコインがある」（\\(q\\)）を知っている
-    - Smith は「仕事を得る人のポケットに10枚のコインがある」（\\(r\\)）と推論
+    - Smith は「Jones が仕事を得る」（\(p\)）と信じている
+    - Smith は「Jones のポケットに10枚のコインがある」（\(q\)）を知っている
+    - Smith は「仕事を得る人のポケットに10枚のコインがある」（\(r\)）と推論
     
     **形式化**：
-    1. \\(B_S(p) \\land K_S(q)\\) （Smith の信念と知識）
-    2. \\(B_S(p \\rightarrow r) \\land B_S(q \\rightarrow r)\\) （Smith の推論）
-    3. \\(B_S(r)\\) （1,2 から導出される信念）
-    4. \\(\\neg p \\land r\\) （実際は Smith 自身が仕事を得て、彼のポケットに10枚）
-    5. \\(B_S(r) \\land r\\) （JTB 条件は満たすが、知識ではない）
+    1. \(B_S(p) \land K_S(q)\) （Smith の信念と知識）
+    2. \(B_S(p \rightarrow r) \land B_S(q \rightarrow r)\) （Smith の推論）
+    3. \(B_S(r)\) （1,2 から導出される信念）
+    4. \(\neg p \land r\) （実際は Smith 自身が仕事を得て、彼のポケットに10枚）
+    5. \(B_S(r) \land r\) （JTB 条件は満たすが、知識ではない）
     
-    **問題の核心**：\\(B_S(r)\\) の根拠が偽の信念 \\(B_S(p)\\) に基づいている
+    **問題の核心**：\(B_S(r)\) の根拠が偽の信念 \(B_S(p)\) に基づいている
 
 この例が示すのは、たまたま真になった信念は知識とは言えないということです。Smith は「仕事を得る人のポケットに10枚のコインがある」と正しく信じていますが、その理由が間違っています（Jones ではなく自分が仕事を得たため）。これは宝くじの番号を適当に予想して偶然当たったようなもので、真の知識とは言えません。
 
@@ -84,9 +84,9 @@
 
 **安全条件（Safety Condition）**は、知識を「近い可能世界での安定性」で特徴づけます：
 
-\\[K_S p \\leftrightarrow B_S p \\land p \\land \\Box_{\\text{close}}(B_S p \\rightarrow p)\\]
+\[K_S p \leftrightarrow B_S p \land p \land \Box_{\text{close}}(B_S p \rightarrow p)\]
 
-ここで \\(\\Box_{\\text{close}}\\) は「すべての近い可能世界で」を意味します。この定義により、偶然的に真となった信念は知識から排除されます。
+ここで \(\Box_{\text{close}}\) は「すべての近い可能世界で」を意味します。この定義により、偶然的に真となった信念は知識から排除されます。
 
 #### 高階認識の形式化
 
@@ -96,20 +96,20 @@
     
     **基本的な高階認識**：
     
-    - \\(K_a K_b p\\)：「a は b が p を知っていることを知っている」
-    - \\(K_a \\neg K_b p\\)：「a は b が p を知らないことを知っている」
-    - \\(B_a K_b p\\)：「a は b が p を知っていると信じている」
+    - \(K_a K_b p\)：「a は b が p を知っていることを知っている」
+    - \(K_a \neg K_b p\)：「a は b が p を知らないことを知っている」
+    - \(B_a K_b p\)：「a は b が p を知っていると信じている」
     
     **推論例**（正の内省）：
-    1. \\(K_a p\\) （前提：a は p を知っている）
-    2. \\(K_a p \\rightarrow K_a K_a p\\) （公理4）
-    3. \\(K_a K_a p\\) （1,2 より modus ponens）
+    1. \(K_a p\) （前提：a は p を知っている）
+    2. \(K_a p \rightarrow K_a K_a p\) （公理4）
+    3. \(K_a K_a p\) （1,2 より modus ponens）
     
     **推論例**（知識の伝達）：
-    1. \\(K_a p\\) （a は p を知っている）
-    2. \\(K_b K_a p\\) （b は a が p を知っていることを知っている）
-    3. \\(K_b K_a p \\rightarrow K_b p\\) （信頼できる情報源からの知識獲得）
-    4. \\(K_b p\\) （2,3 より）
+    1. \(K_a p\) （a は p を知っている）
+    2. \(K_b K_a p\) （b は a が p を知っていることを知っている）
+    3. \(K_b K_a p \rightarrow K_b p\) （信頼できる情報源からの知識獲得）
+    4. \(K_b p\) （2,3 より）
 
 高階認識は、社会的な知識共有の基盤です。例えば、教師が生徒に何かを教える場合、「教師が知識を持っている」だけでなく、「生徒が『教師が知識を持っている』ことを知っている」という高階の認識が必要です。これにより、権威や信頼に基づく知識伝達が可能になります。
 
@@ -132,10 +132,10 @@
     
     **形式的意味**（パス π = s₀, s₁, s₂, ... において）：
     
-    - \\(\\pi, i \\models X \\phi\\) iff \\(\\pi, i+1 \\models \\phi\\)
-    - \\(\\pi, i \\models F \\phi\\) iff \\(\\exists j \\geq i. \\pi, j \\models \\phi\\)
-    - \\(\\pi, i \\models G \\phi\\) iff \\(\\forall j \\geq i. \\pi, j \\models \\phi\\)
-    - \\(\\pi, i \\models \\phi U \\psi\\) iff \\(\\exists j \\geq i. (\\pi, j \\models \\psi \\land \\forall k \\in [i,j). \\pi, k \\models \\phi)\\)
+    - \(\pi, i \models X \phi\) iff \(\pi, i+1 \models \phi\)
+    - \(\pi, i \models F \phi\) iff \(\exists j \geq i. \pi, j \models \phi\)
+    - \(\pi, i \models G \phi\) iff \(\forall j \geq i. \pi, j \models \phi\)
+    - \(\pi, i \models \phi U \psi\) iff \(\exists j \geq i. (\pi, j \models \psi \land \forall k \in [i,j). \pi, k \models \phi)\)
 
 #### プログラム性質の形式化
 
@@ -144,25 +144,29 @@
 !!! example "典型的なプログラム性質"
     
     **相互排除（Mutual Exclusion）**：
-    \\[G \\neg (\\text{critical}_1 \\land \\text{critical}_2)\\]
+
+    \[G \neg (\text{critical}_1 \land \text{critical}_2)\]
     「プロセス1とプロセス2が同時にクリティカルセクションに入ることはない」
     
     これは複数のプロセスが共有資源（例：ファイルやメモリ）にアクセスする際の基本的な安全性条件です。銀行口座への同時更新を防ぐなど、データの一貫性を保証します。
     
     **デッドロックフリー（Deadlock Freedom）**：
-    \\[G (\\text{request} \\rightarrow F \\text{grant})\\]
+
+    \[G (\text{request} \rightarrow F \text{grant})\]
     「リクエストがあれば、いつかは許可される」
     
     システムが永遠に待ち状態にならないことを保証します。例えば、印刷キューに入れたドキュメントは必ずいつかは印刷されます。
     
     **公平性（Fairness）**：
-    \\[G F \\text{enabled} \\rightarrow G F \\text{executed}\\]
+
+    \[G F \text{enabled} \rightarrow G F \text{executed}\]
     「無限回有効になるプロセスは無限回実行される」
     
     すべてのプロセスが平等に実行機会を得ることを保証します。特定のプロセスが永遠に無視されることを防ぎます。
     
     **応答性（Responsiveness）**：
-    \\[G (\\text{input} \\rightarrow X^{\\leq n} \\text{output})\\]
+
+    \[G (\text{input} \rightarrow X^{\leq n} \text{output})\]
     「入力から n ステップ以内に出力が生成される」
     
     リアルタイムシステムで重要な性質です。例えば、自動車のブレーキシステムは、ペダル入力から数ミリ秒以内に反応する必要があります。
@@ -175,16 +179,16 @@
     
     **状態変数**：
     
-    - \\(\\text{red}, \\text{yellow}, \\text{green}\\)：各色の点灯状態
+    - \(\text{red}, \text{yellow}, \text{green}\)：各色の点灯状態
     
     **仕様**：
-    1. **安全性**：\\(G \\neg (\\text{red} \\land \\text{green})\\)
+    1. **安全性**：\(G \neg (\text{red} \land \text{green})\)
        「赤と緑が同時に点灯しない」
     
-    2. **生存性**：\\(G (\\text{red} \\rightarrow F \\text{green})\\)
+    2. **生存性**：\(G (\text{red} \rightarrow F \text{green})\)
        「赤信号の後、いつかは緑になる」
     
-    3. **順序性**：\\(G (\\text{green} \\rightarrow X (\\text{yellow} U \\text{red}))\\)
+    3. **順序性**：\(G (\text{green} \rightarrow X (\text{yellow} U \text{red}))\)
        「緑の次は黄色を経て赤になる」
     
     **検証手順**：
@@ -206,9 +210,9 @@
     
     **合理性公理**：
     
-    - **信念の一貫性**：\\(\\neg (BEL(a, \\phi) \\land BEL(a, \\neg \\phi))\\)
-    - **意図は信念を含意**：\\(INTEND(a, \\phi) \\rightarrow BEL(a, \\Diamond \\phi)\\)
-    - **意図の永続性**：\\(INTEND(a, \\phi) \\rightarrow INTEND(a, F \\phi)\\) until achieved
+    - **信念の一貫性**：\(\neg (BEL(a, \phi) \land BEL(a, \neg \phi))\)
+    - **意図は信念を含意**：\(INTEND(a, \phi) \rightarrow BEL(a, \Diamond \phi)\)
+    - **意図の永続性**：\(INTEND(a, \phi) \rightarrow INTEND(a, F \phi)\) until achieved
 
 #### 共通知識と分散システム
 
@@ -219,23 +223,25 @@
     **問題設定**：n 人の将軍が攻撃か撤退を決定
     
     **知識の階層**：
-    1. **個人知識**：\\(K_i \\text{attack}\\)
+    1. **個人知識**：\(K_i \text{attack}\)
        「将軍 i は攻撃を知っている」
     
-    2. **相互知識**：\\(E_G \\text{attack} = \\bigwedge_{i \\in G} K_i \\text{attack}\\)
+    2. **相互知識**：\(E_G \text{attack} = \bigwedge_{i \in G} K_i \text{attack}\)
        「全員が攻撃を知っている」
     
-    3. **共通知識**：\\(C_G \\text{attack}\\)
+    3. **共通知識**：\(C_G \text{attack}\)
        「全員が攻撃を知り、全員がそれを知っていることを知り...（無限）」
     
     **形式的定義**：
-    \\[C_G \\phi \\leftrightarrow E_G \\phi \\land E_G E_G \\phi \\land E_G E_G E_G \\phi \\land ...\\]
+
+    \[C_G \phi \leftrightarrow E_G \phi \land E_G E_G \phi \land E_G E_G E_G \phi \land ...\]
     
     **不動点表現**：
-    \\[C_G \\phi \\leftrightarrow E_G(\\phi \\land C_G \\phi)\\]
+
+    \[C_G \phi \leftrightarrow E_G(\phi \land C_G \phi)\]
     
     **合意の必要条件**：
-    同時攻撃には \\(C_G \\text{attack}\\) が必要
+    同時攻撃には \(C_G \text{attack}\) が必要
 
 この問題は、分散システムにおける合意形成の難しさを示しています。全員が「攻撃する」と知っているだけでは不十分で、「全員が『全員が攻撃すると知っている』ことを知っている」という無限の入れ子構造が必要です。これは、メールの返信確認が無限に続く状況に似ています：「了解しました」「了解を確認しました」「確認の確認を...」という具合です。
 
@@ -246,8 +252,9 @@
 !!! example "状況計算と変化の論理"
     
     **動作の効果**：
-    \\[[\\alpha]\\phi\\) = 「動作 α の後、必ず φ が成立」
-    \\(\\langle\\alpha\\rangle\\phi\\) = 「動作 α の後、φ が成立可能」
+
+    \[[\alpha]\phi\) = 「動作 α の後、必ず φ が成立」
+    \(\langle\alpha\rangle\phi\) = 「動作 α の後、φ が成立可能」
     
     **フレーム公理の例**（ブロック世界）：
     ```
@@ -280,10 +287,10 @@
     
     **型理論**：
     
-    - \\(e\\)：個体（entity）
-    - \\(t\\)：真理値（truth value）
-    - \\(s\\)：可能世界（possible world）
-    - \\(\\langle s, \\alpha \\rangle\\)：世界から型 α への関数（内包）
+    - \(e\)：個体（entity）
+    - \(t\)：真理値（truth value）
+    - \(s\)：可能世界（possible world）
+    - \(\langle s, \alpha \rangle\)：世界から型 α への関数（内包）
 
 #### 態度動詞の形式化
 
@@ -294,20 +301,22 @@
     **文**：「太郎は花子が来ると信じている」
     
     **形式表現**：
-    \\[\\text{believe}(t, \\hat{} \\text{come}(h))\\]
+
+    \[\text{believe}(t, \hat{} \text{come}(h))\]
     
     **真理条件**：
-    \\[\\llbracket \\text{believe}(t, p) \\rrbracket^{w} = 1 \\text{ iff } \\forall w' \\in DOX_t(w): \\llbracket p \\rrbracket^{w'} = 1\\]
+
+    \[\llbracket \text{believe}(t, p) \rrbracket^{w} = 1 \text{ iff } \forall w' \in DOX_t(w): \llbracket p \rrbracket^{w'} = 1\]
     
-    ここで \\(DOX_t(w)\\) は世界 \\(w\\) における太郎の信念世界の集合
+    ここで \(DOX_t(w)\) は世界 \(w\) における太郎の信念世界の集合
     
     **de re / de dicto の区別**：
     
     1. **de dicto**：「太郎は[最年少の学生が優秀だ]と信じている」
-       \\(B_t(\\iota x.\\text{youngest}(x) \\land \\text{excellent}(\\iota x.\\text{youngest}(x)))\\)
+       \(B_t(\iota x.\text{youngest}(x) \land \text{excellent}(\iota x.\text{youngest}(x)))\)
     
     2. **de re**：「最年少の学生について、太郎は[その人が優秀だ]と信じている」
-       \\(\\exists x(\\text{youngest}(x) \\land B_t(\\text{excellent}(x)))\\)
+       \(\exists x(\text{youngest}(x) \land B_t(\text{excellent}(x)))\)
 
 #### 条件法と反事実条件文
 
@@ -317,16 +326,17 @@
     
     **文**：「もし雨が降っていたら、試合は中止だっただろう」
     
-    **記号**：\\(p \\Box\\!\\!\\rightarrow q\\)（"p would q"）
+    **記号**：\(p \Box\!\!\rightarrow q\)（"p would q"）
     
     **真理条件**（Lewis-Stalnaker意味論）：
-    \\[w \\models p \\Box\\!\\!\\rightarrow q \\text{ iff } \\min_{\\leq_w}(\\llbracket p \\rrbracket) \\subseteq \\llbracket q \\rrbracket\\]
+
+    \[w \models p \Box\!\!\rightarrow q \text{ iff } \min_{\leq_w}(\llbracket p \rrbracket) \subseteq \llbracket q \rrbracket\]
     
-    「\\(w\\) に最も近い \\(p\\) が真な世界で \\(q\\) も真」
+    「\(w\) に最も近い \(p\) が真な世界で \(q\) も真」
     
     **類似性の順序**：
     
-    - \\(w_1 \\leq_w w_2\\)：「\\(w_1\\) は \\(w_2\\) より \\(w\\) に近い」
+    - \(w_1 \leq_w w_2\)：「\(w_1\) は \(w_2\) より \(w\) に近い」
     - 物理法則の保存 > 個別事実の一致 > 些細な違い
     
     **推論パターン**：
@@ -347,18 +357,20 @@
     **発話**：「太郎は英語か仏語を話す」
     
     **文字通りの意味**：
-    \\(\\text{speak}(t, E) \\lor \\text{speak}(t, F)\\)
+
+    \(\text{speak}(t, E) \lor \text{speak}(t, F)\)
     
     **含意される意味**：
-    \\(\\neg K_s(\\text{speak}(t, E)) \\land \\neg K_s(\\text{speak}(t, F))\\)
+
+    \(\neg K_s(\text{speak}(t, E)) \land \neg K_s(\text{speak}(t, F))\)
     「話者は太郎が英語を話すか知らず、仏語を話すかも知らない」
     
     **推論過程**：
     
-    1. 話者は \\(p \\lor q\\) と述べた
-    2. もし \\(K_s p\\) なら、より情報的な \\(p\\) を述べるはず（量の格率）
+    1. 話者は \(p \lor q\) と述べた
+    2. もし \(K_s p\) なら、より情報的な \(p\) を述べるはず（量の格率）
     3. 話者は協力的である（協調原理）
-    4. よって \\(\\neg K_s p \\land \\neg K_s q\\)
+    4. よって \(\neg K_s p \land \neg K_s q\)
 
 ---
 

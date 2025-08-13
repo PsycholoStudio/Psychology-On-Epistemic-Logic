@@ -12,6 +12,7 @@
     
     **機械化への道**：タブロー法などの手法により、様相論理の証明探索が機械的に実行可能となり、自動証明への道が開かれる。
 
+
 ---
 
 [前節](3-2-classical-systems.md)までで様相論理の様々な体系を学びましたが、この節では、これらの体系において実際に証明を構築する方法を詳しく探求します。証明論は、論理的推論を形式的かつ体系的に実行するための理論的基盤を提供します。
@@ -49,6 +50,7 @@
 ヒルベルト形式体系の最大の長所は、その**理論的優雅さ**です。最小限の公理から出発する体系は、論理の基礎を明確にし、メタ理論的な分析を容易にします。独立性、一貫性、完全性などの性質を研究する際には、ヒルベルト形式体系が最も適しています。
 
 一方で、実際の証明構築においては困難が伴います。人間の自然な推論とは異なり、公理からの導出は迂回的で直観に反することがあります。また、長い証明では中間段階を追跡することが困難になり、証明の全体構造を把握しにくくなります。
+
 
 ---
 
@@ -97,6 +99,7 @@
 
 また、証明の構造が推論の構造を直接反映するため、証明から計算内容を抽出する**カリー・ハワード対応**の文脈でも重要な役割を果たします。これにより、証明と計算の深い関係が明らかになります。
 
+
 ---
 
 ## 3.3.3 タブロー法
@@ -114,16 +117,19 @@
 !!! abstract "様相論理のタブロー規則"
 
     **T□規則**：
+
     \\[
     \\frac{T\\Box\\phi}{T\\phi \\text{（すべての到達可能世界で）}}
     \\]
     
     **F□規則**：
+
     \\[
     \\frac{F\\Box\\phi}{F\\Diamond\\neg\\phi} \\quad \\frac{\\text{新しい世界を作成}}{F\\phi \\text{（その世界で）}}
     \\]
     
     **T◇規則**：
+
     \\[
     \\frac{T\\Diamond\\phi}{\\frac{\\text{新しい世界を作成}}{T\\phi \\text{（その世界で）}}}
     \\]
@@ -154,6 +160,7 @@
     2. **人間による証明**：自然演繹（直観的理解）
     3. **自動証明**：タブロー法（機械的探索）
     4. **教育目的**：自然演繹とタブロー法の併用
+
 
 ---
 
@@ -187,6 +194,7 @@
 
 ヒルベルト形式は、証明の検証には適していますが、証明の発見には適していません。そのため、実装では他の体系で証明を発見し、必要に応じてヒルベルト形式に変換するアプローチが取られることがあります。
 
+
 ---
 
 ## 3.3.5 証明論の応用と展望
@@ -219,6 +227,7 @@
     
     これらの話題は、次節以降でさらに詳しく扱います
 
+
 ---
 
 ## まとめ
@@ -237,15 +246,24 @@
 
 次の第4節「対応理論」では、様相論理の公理とフレーム条件の対応関係をより深く探求します。この美しい理論により、構文論と意味論の密接な関係が明らかになり、様相論理の理解がさらに深まります。
 
+
 ---
 
 ## 参考文献
 
+
 - Blackburn, P., de Rijke, M., & Venema, Y. (2001). *Modal Logic*. Cambridge University Press.
+
 - Fitting, M., & Mendelsohn, R. L. (1998). *First-Order Modal Logic*. Kluwer Academic Publishers.
+
 - Garson, J. W. (2013). *Modal Logic for Philosophers* (2nd ed.). Cambridge University Press.
+
 - Girard, J. Y., Taylor, P., & Lafont, Y. (1989). *Proofs and Types*. Cambridge University Press.
+
 - Goldblatt, R. (1992). *Logics of Time and Computation* (2nd ed.). CSLI Publications.
+
 - Prawitz, D. (1965). *Natural Deduction: A Proof-Theoretical Study*. Almqvist & Wiksell.
+
 - Smullyan, R. M. (1968). *First-Order Logic*. Springer-Verlag.
+
 - Troelstra, A. S., & Schwichtenberg, H. (2000). *Basic Proof Theory* (2nd ed.). Cambridge University Press.

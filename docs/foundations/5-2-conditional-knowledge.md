@@ -12,6 +12,7 @@
     
     **動的更新**：新情報による知識の更新プロセスを条件付き知識として理解し、学習と推論の動的側面を捉える。
 
+
 ---
 
 [前節](5-1-graded-knowledge.md)で知識の段階性を学びましたが、この節では知識の**条件性**という別の重要な側面を探求します。現実の知識の多くは、特定の条件や文脈の下でのみ成立する条件付きの性質を持っています。
@@ -50,6 +51,7 @@
 
 **仮説的推論**：「もし仮説Hが正しければ、観察Oが説明できる」という科学的推論は、条件付き知識の典型例です。
 
+
 ---
 
 ## 5.2.2 条件付き知識演算子
@@ -78,11 +80,13 @@
 !!! abstract "定義5.2.2 —— 条件付き知識の真理条件"
 
     **選択関数アプローチ**：
+
     \[M, w \vDash K_\psi\varphi \text{ iff } \forall v \in f_\psi(w): M, v \vDash \varphi\]
     
     ここで\(f_\psi(w)\)は\(\psi\)が成り立つ\(w\)から到達可能な世界の集合
     
     **制限アプローチ**：
+
     \[M, w \vDash K_\psi\varphi \text{ iff } M|_\psi, w \vDash K\varphi\]
     
     ここで\(M|_\psi\)は\(\psi\)が真となる世界に制限されたモデル
@@ -122,6 +126,7 @@
 **条件の伝播**：\(K_\psi(\chi \to \varphi) \to (K_\psi\chi \to K_\psi\varphi)\)
 条件付き知識内での推論の妥当性
 
+
 ---
 
 ## 5.2.3 反実仮想的知識
@@ -137,6 +142,7 @@
     「もし\(\psi\)だったなら、\(\varphi\)だったろう」
     
     **Lewis-Stalnaker意味論**：
+
     \[M, w \vDash \psi \boxright \varphi \text{ iff } \text{最も近い}\psi\text{-世界で}\varphi\text{が真}\]
     
     **類似度順序**：\(\leq_w\)により世界間の「近さ」を定義
@@ -149,10 +155,12 @@
 「もし\(\psi\)だったなら\(\varphi\)を知っていただろう」
 
 **真理条件**：
+
 \[M, w \vDash K^{cf}_\psi\varphi \text{ iff } M, w \vDash \psi \boxright K\varphi\]
 
 **因果的知識**：
 「AがBの原因であることを知っている」
+
 \[K(\text{cause}(A, B)) \equiv K(\lnot A \boxright \lnot B)\]
 
 ### 反実仮想推論の応用
@@ -167,6 +175,7 @@
 
 **計画と意思決定**：
 「この戦略を取れば成功するだろう」という予測は、まだ実現していない条件での知識\(K^{cf}_{strategy}(success)\)です。
+
 
 ---
 
@@ -197,9 +206,11 @@
 文脈\(c_1\)から\(c_2\)への変換で保存される知識を特定
 
 **不変知識**：
+
 \[\text{Invariant}(\varphi) \equiv \forall c, c' \in \mathcal{C}: K^c\varphi \to K^{c'}\varphi\]
 
 **文脈相対的知識**：
+
 \[\text{Relative}(\varphi) \equiv \exists c, c' \in \mathcal{C}: K^c\varphi \land \lnot K^{c'}\varphi\]
 
 ### 文脈の階層構造
@@ -209,13 +220,16 @@
 **文脈の特殊化**：\(c_1 \sqsubseteq c_2\)（\(c_2\)は\(c_1\)より特殊）
 
 **知識の継承**：
+
 \[c_1 \sqsubseteq c_2 \to (K^{c_1}\varphi \to K^{c_2}\varphi)\]
 
 一般的文脈での知識は特殊文脈でも成立
 
 **デフォルト知識**：
 通常文脈での知識を例外的文脈が覆す可能性
+
 \[K^{normal}(birds\_fly) \land K^{penguin}\lnot(penguins\_fly)\]
+
 
 ---
 
@@ -232,6 +246,7 @@
     「\(\psi\)で更新した後\(\varphi\)が成り立つ」
     
     **条件付き知識との関係**：
+
     \[[\psi]K\varphi \leftrightarrow K_\psi\varphi\]
     
     更新後の知識は条件付き知識と等価
@@ -244,10 +259,12 @@
 「\(\psi\)が公開告知された後\(\varphi\)」
 
 **知識への影響**：
+
 \[[!\psi]K\varphi \leftrightarrow (\psi \to K[\psi]\varphi)\]
 
 **共通知識の生成**：
 公開告知により共通知識が生成される
+
 \[[!\psi]C\psi\]（\(\psi\)の告知後、\(\psi\)は共通知識）
 
 ### 信念修正との関係
@@ -258,12 +275,15 @@ AGM理論の信念修正を条件付き知識で表現します。
 知識集合\(K\)を\(\psi\)で修正
 
 **条件付き知識表現**：
+
 \[\varphi \in K * \psi \equiv K_\psi\varphi\]
 
 **修正の公理**（AGM公準の条件付き知識版）：
+
 1. 成功：\(K_\psi\psi\)
 2. 一貫性：\(\lnot K_\psi\bot\)（\(\psi\)が一貫的なら）
 3. 保存：\(K\varphi \land \lnot K\lnot\psi \to K_\psi\varphi\)
+
 
 ---
 
@@ -281,6 +301,7 @@ K_{fever ∧ rash}(measles) = 0.8
 
 **段階的診断**：
 初期症状から詳細検査まで、条件を追加しながら診断を精緻化
+
 \[K_{s_1}(d) \to K_{s_1 \land s_2}(d') \to K_{s_1 \land s_2 \land test}(d'')\]
 
 **鑑別診断**：
@@ -292,14 +313,17 @@ K_{fever ∧ rash}(measles) = 0.8
 
 **条件付き法的知識**：
 「もし行為Aが意図的なら、犯罪Cが成立する」
+
 \[K_{intentional(A)}(crime(C))\]
 
 **前例の適用**：
 過去の判例を現在の事案に適用する際の条件マッチング
+
 \[K_{similar(case1, case2)}(same\_judgment)\]
 
 **反実仮想的責任論**：
 「もし適切な注意をしていれば事故は防げた」
+
 \[K^{cf}_{proper\_care}(\lnot accident)\]
 
 ### 自然言語処理
@@ -314,10 +338,12 @@ K_context("bank", "土手") if context = "river"
 
 **前提条件の推論**：
 「彼は傘を持っている」→「雨が降っている（可能性が高い）」
+
 \[K_{umbrella}(probably\_raining)\]
 
 **会話の含意**：
 発話の文脈による含意の理解
+
 \[K_{context}(implicature)\]
 
 ### 機械学習での活用
@@ -326,6 +352,7 @@ K_context("bank", "土手") if context = "river"
 
 **条件付き予測**：
 「特徴Xがある条件でラベルYを予測」
+
 \[K_{features=X}(label=Y)\]
 
 **説明可能AI**：
@@ -334,7 +361,9 @@ K_context("bank", "土手") if context = "river"
 
 **転移学習**：
 ソースドメインの知識をターゲットドメインの条件下で適用
+
 \[K^{source}_\psi\varphi \to K^{target}_{\psi'}\varphi'\]
+
 
 ---
 
@@ -358,15 +387,24 @@ K_context("bank", "土手") if context = "river"
 
 次の第3節「不完全情報の論理」では、部分的にしか情報を持たない状況での推論を扱います。不確実性、曖昧性、無知の表現と、それらの下での合理的推論の方法を学習します。
 
+
 ---
 
 ## 参考文献
 
+
 - Lewis, D. (1973). *Counterfactuals*. Blackwell.
+
 - Stalnaker, R. (1968). A theory of conditionals. In N. Rescher (Ed.), *Studies in Logical Theory* (pp. 98-112). Blackwell.
+
 - Baltag, A., & Moss, L. S. (2004). Logics for epistemic programs. *Synthese*, 139(2), 165-224.
+
 - van Ditmarsch, H., van der Hoek, W., & Kooi, B. (2007). *Dynamic Epistemic Logic*. Springer.
+
 - Boutilier, C. (1994). Conditional logics of normality: A modal approach. *Artificial Intelligence*, 68(1), 87-154.
+
 - Giordano, L., Gliozzi, V., Olivetti, N., & Pozzato, G. L. (2007). Preferential description logics. In *Logic for Programming, Artificial Intelligence, and Reasoning* (pp. 257-272).
+
 - Alchourrón, C. E., Gärdenfors, P., & Makinson, D. (1985). On the logic of theory change: Partial meet contraction and revision functions. *Journal of Symbolic Logic*, 50(2), 510-530.
+
 - Plaza, J. (1989). Logics of public communications. In *Proceedings of the 4th International Symposium on Methodologies for Intelligent Systems* (pp. 201-216).

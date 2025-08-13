@@ -12,6 +12,7 @@
     
     **証明の構造化**：証明の正規化により、様相推論の計算的内容を抽出し、プログラムとしての解釈を可能にする。
 
+
 ---
 
 **注意**：この節は発展的内容を含みます。第3章の基本内容を十分理解してから取り組むことを推奨します。
@@ -43,6 +44,7 @@
 BHK解釈では、\(\varphi \land \psi\) の証明は \(\varphi\) の証明と \(\psi\) の証明のペアであり、\(\varphi \lor \psi\) の証明は \(\varphi\) の証明か \(\psi\) の証明のいずれかです。\(\varphi \to \psi\) の証明は、\(\varphi\) の証明を \(\psi\) の証明に変換する構成的手続きです。
 
 この枠組みを様相論理に拡張することで、様相演算子の構成的解釈が可能になります。
+
 
 ---
 
@@ -92,6 +94,7 @@ BHK解釈では、\(\varphi \land \psi\) の証明は \(\varphi\) の証明と \
 
 この複雑な構造は、様相論理と構成的数学の深い関係を示しています。
 
+
 ---
 
 ## 3.5.3 証明項による様相論理
@@ -103,12 +106,15 @@ BHK解釈では、\(\varphi \land \psi\) の証明は \(\varphi\) の証明と \
 !!! abstract "定義3.5.3 —— 様相λ計算の基本構造"
 
     **型（Types）**：
+
     \\[A, B ::= \alpha \mid A \to B \mid \Box A \mid \Diamond A\\]
     
     **項（Terms）**：
+
     \\[t ::= x \mid \lambda x{:}A.t \mid t_1 \, t_2 \mid \text{box} \, t \mid \text{let box} \, x = t_1 \, \text{in} \, t_2 \mid \text{dia} \, t \mid \text{let dia} \, x = t_1 \, \text{in} \, t_2\\]
     
     **判断**：
+
     \\[\Gamma \vdash t : A \quad \text{（項tが文脈Γで型Aを持つ）}\\]
 
 この体系では、\(\Box A\) 型の項は「A の証明についての証明」を表し、\(\Diamond A\) 型の項は「A の証明の潜在的構成」を表します。
@@ -158,6 +164,7 @@ Gentzenのカット除去定理の様相版も、重要な計算論的意味を�
 
 しかし、適切に設計された証明体系では、カット除去が計算として実現され、効率的な証明変換が可能になります。
 
+
 ---
 
 ## 3.5.4 構成的様相論理の体系
@@ -197,6 +204,7 @@ Gödel翻訳では、古典的命題\(\varphi\)を\(\Box\varphi\)に変換しま
 
 この結果は、古典論理と構成的論理の関係について深い洞察を提供します。古典的真理は「証明可能性についての構成的真理」として理解できるのです。
 
+
 ---
 
 ## 3.5.5 計算論的応用
@@ -212,6 +220,7 @@ Gödel翻訳では、古典的命題\(\varphi\)を\(\Box\varphi\)に変換しま
     **定理**：\(\Box(A \to B) \to (\Box A \to \Box B)\) （K公理）
     
     **証明から抽出されるプログラム**：
+
     \\[
     \\begin{align}
     &\\lambda f{:} \\Box(A \\to B). \\lambda x{:} \\Box A.\\,\\\\
@@ -241,6 +250,7 @@ Gödel翻訳では、古典的命題\(\varphi\)を\(\Box\varphi\)に変換しま
     2. **計算的直観**：証明を計算、論理を型として理解
     3. **段階的理解**：まず単純な例から始める
     4. **実装との対応**：プログラミング言語の型システムと関連付ける
+
 
 ---
 
@@ -274,6 +284,7 @@ Gödel翻訳では、古典的命題\(\varphi\)を\(\Box\varphi\)に変換しま
 
 **時相論理の統合**：時間と様相を統合した証明論的意味論は、反応システムや並行プログラムの検証に応用できます。
 
+
 ---
 
 ## まとめ
@@ -296,17 +307,28 @@ S4の構成的解釈や直観主義S4、Gödel翻訳などにより、証明論�
 
 これらの基礎理論の上に、次章以降では、認識論理という具体的な応用分野を探求していきます。知識と信念の論理的モデル化により、抽象的な様相論理が具体的な認識的現象の分析に威力を発揮することを学習します。
 
+
 ---
 
 ## 参考文献
 
+
 - Artemov, S. N. (2001). Explicit provability and constructive semantics. *Bulletin of Symbolic Logic*, 7(1), 1-36.
+
 - Benton, P. N., Bierman, G. M., & de Paiva, V. C. V. (1998). Computational types from a logical perspective. *Journal of Functional Programming*, 8(2), 177-193.
+
 - Davies, R., & Pfenning, F. (2001). A modal analysis of staged computation. *Journal of the ACM*, 48(3), 555-604.
+
 - Dummett, M. (2000). *Elements of Intuitionism* (2nd ed.). Oxford University Press.
+
 - Girard, J. Y., Taylor, P., & Lafont, Y. (1989). *Proofs and Types*. Cambridge University Press.
+
 - Kobayashi, S. (1997). Monad as modality. *Theoretical Computer Science*, 175(1), 29-74.
+
 - Martin-Löf, P. (1984). *Intuitionistic Type Theory*. Bibliopolis.
+
 - Pfenning, F., & Davies, R. (2001). A judgmental reconstruction of modal logic. *Mathematical Structures in Computer Science*, 11(4), 511-540.
+
 - Prawitz, D. (1965). *Natural Deduction: A Proof-Theoretical Study*. Almqvist & Wiksell.
+
 - Troelstra, A. S., & van Dalen, D. (1988). *Constructivism in Mathematics* (Vol. 1). North-Holland.

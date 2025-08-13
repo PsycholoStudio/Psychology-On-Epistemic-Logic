@@ -12,6 +12,7 @@
     
     **任意時間アルゴリズム**：利用可能時間に応じて推論の品質を調整し、時間と精度のトレードオフを最適化する手法を開発する。
 
+
 ---
 
 [前節](5-3-incomplete-information.md)で不完全情報下の推論を学びましたが、この節では**計算資源の制約**という別の現実的制限を扱います。理論上可能な推論と実際に実行可能な推論の間には大きなギャップがあり、これを埋める理論が必要です。
@@ -23,9 +24,14 @@
 標準的な認識論理では、認識主体は**論理的全能者**として扱われます。
 
 **論理的全能性**：
+
+
 - すべての論理的帰結を即座に認識する
+
 - 矛盾を決して信じない  
+
 - 論理的に等価な命題に同じ態度を取る
+
 - 計算時間や記憶容量の制限がない
 
 この理想化は数学的には美しいですが、現実の認識主体とは大きく乖離します。
@@ -59,6 +65,7 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
     **ヒューリスティック**：
     完全ではないが効率的な推論方法の使用
 
+
 ---
 
 ## 5.4.2 有限資源の形式化
@@ -76,6 +83,7 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
     **問い合わせ制約**：外部への問い合わせ回数 \(Q \leq Q_{max}\)
     
     **資源制約付き知識**：
+
     \[K^{T,M,Q}\varphi := \text{資源}(T,M,Q)\text{内で}\varphi\text{を証明可能}\]
 
 ### 段階的推論
@@ -83,13 +91,20 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
 利用可能資源に応じて推論の深さを調整します。
 
 **推論レベル**：
+
+
 - レベル0：直接記憶されている事実
+
 - レベル1：1ステップ推論で得られる結論
+
 - レベル2：2ステップ推論で得られる結論
+
 - ...
+
 - レベルn：nステップ推論で得られる結論
 
 **資源配分戦略**：
+
 \[K^{(n)}\varphi := \text{最大}n\text{ステップで}\varphi\text{を導出可能}\]
 
 ### 近似推論
@@ -97,16 +112,20 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
 厳密な推論の代わりに近似的な推論を用います。
 
 **確率的近似**：
+
 \[P(K\varphi | \text{evidence}, \text{resources}) \geq \theta\]
 確信度が閾値\(\theta\)以上なら「知っている」と判定
 
 **ファジィ近似**：
+
 \[\mu_K(\varphi) \in [0, 1]\]
 知識の度合いをファジィ値で表現
 
 **区間近似**：
+
 \[K[\alpha, \beta]\varphi := \alpha \leq P(\varphi) \leq \beta\]
 確率の上下限で知識を表現
+
 
 ---
 
@@ -131,6 +150,7 @@ Herbert Simonは、現実の意思決定者は**制限された合理性**（Bou
 時間とともに推論の精度を向上させます。
 
 **段階的証明探索**：
+
 1. 最初は浅い証明のみ探索
 2. 時間があれば より深い証明を探索
 3. 制限時間で最良の証明を返す
@@ -156,15 +176,21 @@ def anytime_reasoning(query, max_time):
 推論資源の配分を推論対象とします。
 
 **メタレベル質問**：
+
+
 - どの推論方向を優先すべきか？
+
 - いつ推論を停止すべきか？
+
 - どの程度の精度で満足すべきか？
 
 **計算価値理論**：
+
 \[VOC(\text{computation}) = EU(\text{with computation}) - EU(\text{without computation}) - \text{Cost}(\text{computation})\]
 
 **最適停止理論**：
 期待される改善が計算コストを下回ったら停止
+
 
 ---
 
@@ -190,14 +216,19 @@ def anytime_reasoning(query, max_time):
 計算複雑性による知識の階層を定義します。
 
 **階層の関係**：
+
 \[K^{AC^0} \subseteq K^L \subseteq K^P \subseteq K^{PSPACE} \subseteq K^{EXPTIME}\]
 
 **分離結果**：
 各階層は真に包含関係にある（計算複雑性理論の結果より）
 
 **実用的境界**：
+
+
 - 人間の直観的推論：\(K^{AC^0}\)レベル
+
 - 電卓での計算：\(K^P\)レベル  
+
 - コンピュータでの探索：\(K^{EXPTIME}\)レベル
 
 ### 近似知識の公理系
@@ -205,14 +236,18 @@ def anytime_reasoning(query, max_time):
 近似的認識論理の公理化を行います。
 
 **弱化された分配公理**：
+
 \[K^r(\varphi \to \psi) \land K^s\varphi \to K^{r \cdot s}(\psi)\]
 確信度の積で結論の確信度が決まる
 
 **資源単調性**：
+
 \[\text{resources}_1 \leq \text{resources}_2 \implies (K^{resources_1}\varphi \to K^{resources_2}\varphi)\]
 
 **近似的内省**：
+
 \[K^r\varphi \to K^{s}K^r\varphi\] （\(s \geq r\)）
+
 
 ---
 
@@ -231,6 +266,7 @@ def anytime_reasoning(query, max_time):
     「時間\(\Delta t\)以内に\(\varphi\)を知る」
     
     **効力の減衰**：
+
     \[K@t\varphi \land (t' > t + \Delta) \to K@{t'}[\text{decay}(\Delta)]\varphi\]
 
 ### デッドライン制約
@@ -239,15 +275,21 @@ def anytime_reasoning(query, max_time):
 
 **ハード制約**：
 指定時刻までに必ず応答する
+
 \[\text{必ず} \, t_{deadline} \text{までに答を返す}\]
 
 **ソフト制約**：
 遅延にペナルティがある
+
 \[\text{Utility} = f(\text{quality}) - g(\text{delay})\]
 
 **推論のスケジューリング**：
+
+
 - 固定優先度：重要度順に処理
+
 - 動的優先度：締切近い順に処理
+
 - 比例配分：重要度に応じて時間配分
 
 ### 割り込み処理
@@ -270,6 +312,7 @@ def interrupt_handler(new_query, current_queries):
 **増分的推論**：
 前回の計算結果を活用して効率化
 
+
 ---
 
 ## 5.4.6 実用システムでの実装
@@ -285,13 +328,18 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 ```
 
 **段階的診断**：
+
 1. 5分以内：基本的な鑑別診断
 2. 15分以内：詳細な検査結果を考慮
 3. 1時間以内：専門医への相談結果を統合
 
 **確信度による判断**：
+
+
 - 確信度 > 0.9：即座に診断確定
+
 - 0.7 < 確信度 ≤ 0.9：追加検査を提案
+
 - 確信度 ≤ 0.7：他の専門医に紹介
 
 ### 自動運転システム
@@ -299,11 +347,16 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 実時間制約が厳しい自動運転での応用です。
 
 **反応時間の階層**：
+
+
 - 緊急回避：100ms以内
+
 - 経路変更：1秒以内  
+
 - 目的地変更：任意時間
 
 **センサー融合の優先順位**：
+
 1. 衝突回避センサー（最優先）
 2. 車線維持センサー
 3. 交通標識認識
@@ -311,6 +364,7 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 
 **不確実性と安全性**：
 不確実性が高い場合は保守的な行動を選択
+
 \[\text{safety\_margin} = f(\text{uncertainty\_level})\]
 
 ### 情報検索システム
@@ -318,8 +372,12 @@ IF 慢性的症状 THEN 優先度 = ROUTINE
 大規模データベースからの実時間検索です。
 
 **クエリの複雑性管理**：
+
+
 - 単純クエリ：インデックス直接参照
+
 - 複雑クエリ：近似アルゴリズム使用
+
 - 超複雑クエリ：サンプリングによる推定
 
 **結果の段階的提示**：
@@ -348,17 +406,26 @@ def incremental_search(query, max_time):
 リアルタイム戦略ゲームでの意思決定です。
 
 **思考時間の配分**：
+
+
 - 戦術的判断：フレームごと（16ms）
+
 - 戦略的計画：1秒ごと
+
 - 長期戦略：10秒ごと
 
 **近似的ゲーム木探索**：
+
+
 - モンテカルロ木探索（MCTS）
+
 - Upper Confidence bounds applied to Trees (UCT)
+
 - 制限時間内でのベスト手選択
 
 **学習と適応**：
 対戦相手の戦略を学習し、時間配分を動的調整
+
 
 ---
 
@@ -382,15 +449,24 @@ def incremental_search(query, max_time):
 
 次の第5節「非標準的アプローチ」【発展】では、これまでの伝統的な様相論理的アプローチを超えた、新しい認識論理の可能性を探求します。量子論理、動的論理、型理論など、先端的な研究分野との融合を学習します。
 
+
 ---
 
 ## 参考文献
 
+
 - Simon, H. A. (1955). A behavioral model of rational choice. *Quarterly Journal of Economics*, 69(1), 99-118.
+
 - Russell, S. J., & Wefald, E. H. (1991). *Do the Right Thing: Studies in Limited Rationality*. MIT Press.
+
 - Horvitz, E. J. (1987). Reasoning about beliefs and actions under computational resource constraints. In *Proceedings of the Third Conference on Uncertainty in Artificial Intelligence* (pp. 429-444).
+
 - Zilberstein, S. (1996). Using anytime algorithms in intelligent systems. *AI Magazine*, 17(3), 73-83.
+
 - Dean, T., & Boddy, M. (1988). An analysis of time-dependent planning. In *Proceedings of AAAI-88* (pp. 49-54).
+
 - Papadimitriou, C. H. (1994). *Computational Complexity*. Addison-Wesley.
+
 - Fagin, R., Halpern, J. Y., Moses, Y., & Vardi, M. Y. (1995). *Reasoning About Knowledge*. MIT Press.
+
 - Good, I. J. (1971). Twenty-seven principles of rationality. In V. P. Godambe & D. A. Sprott (Eds.), *Foundations of Statistical Inference* (pp. 108-141). Holt, Rinehart and Winston.

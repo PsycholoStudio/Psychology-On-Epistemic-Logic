@@ -12,6 +12,7 @@
     
     **論理的応用の拡張**：制約論理、計算論理、形式検証等の様々な領域で、一般フレーム理論の概念が強力な分析道具として機能する。
 
+
 ---
 
 **注意**：この節は発展的内容を含みます。第2章の基本内容を十分理解してから取り組むことを推奨します。
@@ -66,6 +67,7 @@
 
 この制約により、現実的な論理システムの限界をより適切にモデル化できます。
 
+
 ---
 
 ## 2.5.2 持続性と単調性
@@ -119,6 +121,7 @@
 
 **表現制約**：形式言語で表現可能な概念の範囲は、持続性と単調性によって制約されます。
 
+
 ---
 
 ## 2.5.3 正準一般フレーム
@@ -140,6 +143,7 @@
 ### 完全性定理
 
 **定理 2.5.1**（一般フレーム完全性）：論理体系Lについて、以下が同値です：
+
 1. \\(L \\vdash \\phi\\)（Lで \\(\\phi\\) が証明可能）
 2. \\(\\mathcal{F}^c \\models \\phi\\)（正準一般フレームで \\(\\phi\\) が妥当）
 
@@ -150,6 +154,7 @@
 **定理 2.5.2**：任意の一般フレームは、適切な論理体系の正準一般フレームに埋め込むことができます。
 
 これにより、一般フレーム理論と論理体系の理論が密接に対応することが保証されます。
+
 
 ---
 
@@ -200,6 +205,7 @@
 
 **専門化**：特定の応用分野における論理体系を、制約された許容可能命題集合として理解できます。
 
+
 ---
 
 ## 2.5.5 応用例：論理システムの拡張
@@ -228,6 +234,7 @@
 
 **非標準モデル**：概念の解釈における多様性を、許容可能命題集合の構造的変化として理解できます。
 
+
 ---
 
 ## まとめ
@@ -248,13 +255,20 @@
 
 これらの基礎の上に、次章以降では様相論理の心理学への具体的応用を探求していきます。認知心理学、社会心理学、発達心理学、臨床心理学の各分野において、様相論理的分析がどのように研究の理論化と精密化に貢献できるかを詳しく検討していきます。
 
+
 ---
 
 ## 参考文献
 
+
 - Goldblatt, R. (1992). *Logics of Time and Computation* (2nd ed.). CSLI Publications.
+
 - van Benthem, J. (2010). *Modal Logic for Open Minds*. CSLI Publications.
+
 - Blackburn, P., de Rijke, M., & Venema, Y. (2001). *Modal Logic*. Cambridge University Press.
+
 - Piaget, J. (1952). *The Origins of Intelligence in Children*. International Universities Press.
+
 - Vygotsky, L. S. (1978). *Mind in Society: The Development of Higher Psychological Processes*. Harvard University Press.
+
 - Karmiloff-Smith, A. (1992). *Beyond Modularity: A Developmental Perspective on Cognitive Science*. MIT Press.

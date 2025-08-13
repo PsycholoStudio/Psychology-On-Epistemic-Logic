@@ -20,6 +20,7 @@
 ### 他者の心を理解するということ
 
 私たちは日常的に他者の心を読んでいます：
+
 - 友達が眉をひそめているのを見て「困っているな」と思う
 - 相手が知らない情報があることを理解して説明を加える
 - 「あの人はまだそのことを知らないから驚くだろう」と予想する
@@ -44,13 +45,13 @@
 心の理論を様相論理で表現すると、その構造がより明確になります：
 
 **基本レベル**：A は p を知っている
-\\(K_A p\\)
+\(K_A p\)
 
 **二次レベル**：A は、B が p を知っていることを知っている  
-\\(K_A K_B p\\)
+\(K_A K_B p\)
 
 **誤信念**：A は p を信じているが、実際は p は偽である
-\\(B_A p \\land \\neg p\\)
+\(B_A p \land \neg p\)
 
 このように、心の理論の複雑な構造を、様相論理の記号で正確に表現できるのです。
 
@@ -63,13 +64,14 @@
 この段階の子どもは、他者が自分とは異なる視点を持つことを理解し始めます。これを「Level 1 視点取得」と呼びます。
 
 **典型的な行動**：
+
 - 相手の目線の方向を見る（共同注意）
 - 相手に見えるように物を示す
 - 隠れんぼで「相手から見えない場所」を理解する
 
 **様相論理的表現**：
 子どもCが理解していること：
-\\[K_C (\\text{See}_A(\\text{object}) \\leftrightarrow \\text{LineOfSight}_A(\\text{object}))\\]
+\[K_C (\text{See}_A(\text{object}) \leftrightarrow \text{LineOfSight}_A(\text{object}))\]
 「Aさんは、視線が通る物は見えて、視線が通らない物は見えない」
 
 この段階では、まだ複雑な信念の理解はできませんが、知覚レベルでの視点の違いは理解できます。
@@ -79,12 +81,13 @@
 この段階では、他者の欲求や感情を理解できるようになります。
 
 **典型的な行動**：
+
 - 泣いている人を慰めようとする
 - 相手の好みに合わせて行動する
 - 「ママは○○が欲しがっている」と言える
 
 **様相論理的表現**：
-\\[K_C (\\text{Want}_A(\\text{toy}) \\rightarrow \\text{Happy}_A(\\text{get}(\\text{toy})))\\]
+\[K_C (\text{Want}_A(\text{toy}) \rightarrow \text{Happy}_A(\text{get}(\text{toy})))\]
 「Aさんはおもちゃが欲しいので、おもちゃをもらったら嬉しがる」
 
 まだ信念の概念は十分発達していませんが、欲求と感情の因果関係は理解できます。
@@ -96,27 +99,29 @@
 **サリー・アン課題**（Baron-Cohen et al., 1985）を様相論理で表現してみましょう：
 
 **状況設定**：
-- サリーがボールを箱Aに入れて部屋を出る：\\(\\text{Put}_{\\text{Sally}}(\\text{ball}, \\text{boxA})\\)
-- アンがボールを箱Bに移す：\\(\\text{Move}_{\\text{Ann}}(\\text{ball}, \\text{boxA}, \\text{boxB})\\)
-- サリーは移動を見ていない：\\(\\neg \\text{See}_{\\text{Sally}}(\\text{Move}_{\\text{Ann}})\\)
+
+- サリーがボールを箱Aに入れて部屋を出る：\(\text{Put}_{\text{Sally}}(\text{ball}, \text{boxA})\)
+- アンがボールを箱Bに移す：\(\text{Move}_{\text{Ann}}(\text{ball}, \text{boxA}, \text{boxB})\)
+- サリーは移動を見ていない：\(\neg \text{See}_{\text{Sally}}(\text{Move}_{\text{Ann}})\)
 
 **現実の状況**：
-\\[\\text{Location}(\\text{ball}) = \\text{boxB}\\]
+\[\text{Location}(\text{ball}) = \text{boxB}\]
 
 **サリーの信念**：
-\\[B_{\\text{Sally}}(\\text{Location}(\\text{ball}) = \\text{boxA})\\]
+\[B_{\text{Sally}}(\text{Location}(\text{ball}) = \text{boxA})\]
 
 **子どもの課題**：
 サリーの信念と現実が異なることを理解し、サリーの行動をサリーの信念に基づいて予測する：
-\\[K_{\\text{child}}(B_{\\text{Sally}}(\\text{Location}(\\text{ball}) = \\text{boxA}) \\land \\text{Location}(\\text{ball}) = \\text{boxB})\\]
+\[K_{\text{child}}(B_{\text{Sally}}(\text{Location}(\text{ball}) = \text{boxA}) \land \text{Location}(\text{ball}) = \text{boxB})\]
 
-4歳以前の子どもは \\(B_{\\text{Sally}}\\) と現実を区別できず、「サリーは箱Bを探す」と答えがちです。5歳頃になると、他者の誤信念を理解し、「サリーは箱Aを探す」と正しく予測できるようになります。
+4歳以前の子どもは \(B_{\text{Sally}}\) と現実を区別できず、「サリーは箱Bを探す」と答えがちです。5歳頃になると、他者の誤信念を理解し、「サリーは箱Aを探す」と正しく予測できるようになります。
 
 ### 第4段階：二次信念の理解（6-7歳）
 
 さらに高度な段階として、「信念についての信念」を理解できるようになります。
 
 **アイスクリーム課題**（Perner & Wimmer, 1985）の例：
+
 - ジョンとメアリーが公園にいる
 - アイスクリーム屋さんが「教会に移動する」と言って去る  
 - ジョンは帰宅、メアリーは残る
@@ -129,13 +134,13 @@
 **問題**：ジョンの母親は、ジョンがアイスクリーム屋さんをどこで探すと思っているか？
 
 **様相論理的表現**：
-\\[K_{\\text{母親}}(B_{\\text{ジョン}}(\\text{Location}(\\text{屋台}) = \\text{教会}))\\]
+\[K_{\text{母親}}(B_{\text{ジョン}}(\text{Location}(\text{屋台}) = \text{教会}))\]
 
 しかし実際には：
-\\[K_{\\text{ジョン}}(\\text{Location}(\\text{屋台}) = \\text{学校})\\]
+\[K_{\text{ジョン}}(\text{Location}(\text{屋台}) = \text{学校})\]
 
 この段階の子どもは、複雑な認識状態の階層を理解する必要があります：
-\\[K_{\\text{child}}(B_{\\text{母親}}(B_{\\text{ジョン}}(p)) \\land \\neg B_{\\text{ジョン}}(p))\\]
+\[K_{\text{child}}(B_{\text{母親}}(B_{\text{ジョン}}(p)) \land \neg B_{\text{ジョン}}(p))\]
 
 ---
 
@@ -146,6 +151,7 @@
 自閉症スペクトラム障害（ASD）の方々は、心の理論の発達に特徴的なパターンを示します。これは知的能力とは独立した現象として観察されます。
 
 **典型的な困難**：
+
 - 誤信念課題での困難（発達年齢が高くても）
 - 視線追従や共同注意の困難
 - 皮肉や比喩の理解困難  
@@ -156,33 +162,33 @@
 ASDにおける心の理論の特徴を様相論理で分析すると、興味深いパターンが見えてきます：
 
 **視点取得の限界**：
-一般発達：\\(K_{\\text{TD}}(\\text{See}_A(x) \\neq \\text{See}_{\\text{TD}}(x))\\)（他者の視点が自分と異なることを理解）
-ASD：\\(\\text{Difficulty}(K_{\\text{ASD}}(\\text{See}_A(x) \\neq \\text{See}_{\\text{ASD}}(x)))\\)（視点の違いの理解に困難）
+一般発達：\(K_{\text{TD}}(\text{See}_A(x) \neq \text{See}_{\text{TD}}(x))\)（他者の視点が自分と異なることを理解）
+ASD：\(\text{Difficulty}(K_{\text{ASD}}(\text{See}_A(x) \neq \text{See}_{\text{ASD}}(x)))\)（視点の違いの理解に困難）
 
 **信念帰属の困難**：
-\\[\\text{ASD}: \\text{Difficulty}(K_{\\text{ASD}}(B_A(p) \\land \\neg p))\\]
+\[\text{ASD}: \text{Difficulty}(K_{\text{ASD}}(B_A(p) \land \neg p))\]
 他者の誤信念を理解することが困難
 
 **言語的手がかりへの依存**：
 しかし、明示的な手がかりがあると理解が向上：
-\\[\\text{Explicit}(B_A(p)) \\rightarrow K_{\\text{ASD}}(B_A(p))\\]
+\[\text{Explicit}(B_A(p)) \rightarrow K_{\text{ASD}}(B_A(p))\]
 
 ### 支援の方向性
 
 様相論理的分析は、支援方法の開発にも示唆を与えます：
 
 **段階的指導**：
-Level 1: \\(K(\\text{See}_A(x))\\) の理解から始める
-Level 2: \\(K(\\text{Want}_A(x))\\) の理解
-Level 3: \\(K(B_A(p))\\) の理解
+Level 1: \(K(\text{See}_A(x))\) の理解から始める
+Level 2: \(K(\text{Want}_A(x))\) の理解
+Level 3: \(K(B_A(p))\) の理解
 
 **視覚的支援**：
 抽象的な心的状態を視覚的に表現：
-\\[\\text{Visual}(B_A(p)) \\rightarrow \\text{Better Understanding}_{\\text{ASD}}(B_A(p))\\]
+\[\text{Visual}(B_A(p)) \rightarrow \text{Better Understanding}_{\text{ASD}}(B_A(p))\]
 
 **文脈の明示化**：
 暗黙の文脈を明示的にする：
-\\[\\text{Make Explicit}(\\text{Context}) \\rightarrow \\text{Improved}(K_{\\text{ASD}}(B_A(p)))\\]
+\[\text{Make Explicit}(\text{Context}) \rightarrow \text{Improved}(K_{\text{ASD}}(B_A(p)))\]
 
 ---
 
@@ -193,26 +199,26 @@ Level 3: \\(K(B_A(p))\\) の理解
 心の理論の発達には文化差があることが知られています。様相論理はこれらの差異を分析する道具としても有用です：
 
 **西洋文化**：個人の内的状態に焦点
-\\[\\text{Emphasis}(K_A(\\text{Individual Mental States}))\\]
+\[\text{Emphasis}(K_A(\text{Individual Mental States}))\]
 
 **東洋文化**：関係性や文脈に焦点
-\\[\\text{Emphasis}(K_A(\\text{Social Context and Relationships}))\\]
+\[\text{Emphasis}(K_A(\text{Social Context and Relationships}))\]
 
 **集団主義文化**：集団の知識や信念を重視
-\\[\\text{Emphasis}(K_{\\text{Group}}(p) \\text{ rather than } K_{\\text{Individual}}(p))\\]
+\[\text{Emphasis}(K_{\text{Group}}(p) \text{ rather than } K_{\text{Individual}}(p))\]
 
 ### 個人差の源泉
 
 心の理論能力の個人差は以下の要因に関連します：
 
 **ワーキングメモリ容量**：
-\\[\\text{WM Capacity} \\propto \\text{Ability to handle } K_A(K_B(K_C(p)))\\]
+\[\text{WM Capacity} \propto \text{Ability to handle } K_A(K_B(K_C(p)))\]
 
 **言語能力**：
-\\[\\text{Language} \\rightarrow \\text{Better representation of mental states}\\]
+\[\text{Language} \rightarrow \text{Better representation of mental states}\]
 
 **実行機能**：
-\\[\\text{Executive Function} \\rightarrow \\text{Better perspective switching}\\]
+\[\text{Executive Function} \rightarrow \text{Better perspective switching}\]
 
 ---
 

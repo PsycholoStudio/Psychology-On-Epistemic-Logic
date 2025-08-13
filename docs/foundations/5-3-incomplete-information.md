@@ -156,9 +156,11 @@ Nuel Belnapによる四値論理は、矛盾する情報も扱います。
 Pawlakの粗集合理論は、識別不能性に基づく部分情報を扱います。
 
 **識別不能関係**：属性集合\(A\)に関する識別不能性
+
 \[IND(A) = \{(x, y) : \forall a \in A, a(x) = a(y)\}\]
 
 **下近似と上近似**：
+
 - 下近似\(\underline{A}X\)：確実に\(X\)に属する要素
 - 上近似\(\overline{A}X\)：可能的に\(X\)に属する要素
 - 境界領域：\(\overline{A}X - \underline{A}X\)（不確定要素）
@@ -174,6 +176,7 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 \(\pi(w)\)は世界\(w\)の可能性の度合い
 
 **可能性測度と必然性測度**：
+
 - 可能性：\(\Pi(A) = \sup_{w \in A} \pi(w)\)
 - 必然性：\(N(A) = 1 - \Pi(\overline{A})\)
 
@@ -191,11 +194,13 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 !!! note "定義5.3.5 —— デフォルト論理"
 
     **デフォルト規則**：
+
     \[\frac{\alpha : \beta_1, ..., \beta_n}{\gamma}\]
     
     「\(\alpha\)が成り立ち、\(\beta_i\)が矛盾しないなら、\(\gamma\)を結論する」
     
     **例**：
+
     \[\frac{bird(x) : flies(x)}{flies(x)}\]
     「鳥なら、飛べることが矛盾しない限り、飛べると結論する」
 
@@ -207,9 +212,11 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 「通常、\(\varphi\)なら\(\psi\)」
 
 **累積性**：
+
 \[\frac{\varphi |～ \psi \quad \varphi |～ \chi}{\varphi \land \psi |～ \chi}\]
 
 **慎重な単調性**：
+
 \[\frac{\varphi |～ \chi \quad \varphi |～ \psi}{\varphi \land \psi |～ \chi}\]
 
 これらの性質により、合理的な非単調推論が特徴づけられます。
@@ -219,6 +226,7 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 矛盾する情報から議論を構成し、評価します。
 
 **議論の構造**：
+
 - 前提：情報の部分集合
 - 結論：前提から導かれる命題
 - 攻撃：議論間の矛盾関係
@@ -240,11 +248,13 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 !!! abstract "定義5.3.6 —— 情報価値"
 
     **期待情報価値**（Expected Value of Information）：
+
     \[EVOI(Q) = \max_a \sum_q P(Q=q) U(a|Q=q) - \max_a EU(a)\]
     
     質問\(Q\)の答えを知ることの期待効用増加
     
     **情報エントロピー**：
+
     \[H(X) = -\sum_x P(x) \log P(x)\]
     
     不確実性の定量的尺度
@@ -255,10 +265,12 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 
 **二分探索戦略**：
 可能性空間を半分に分割する質問を選択
+
 \[Q^* = \arg\min_Q ||\{w : Q(w) = yes\}| - |\{w : Q(w) = no\}||\]
 
 **最大エントロピー削減**：
 答えによる エントロピー削減が最大の質問を選択
+
 \[Q^* = \arg\max_Q [H(W) - \mathbb{E}[H(W|Q)]]\]
 
 **診断的質問選択**：
@@ -269,6 +281,7 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 情報獲得と即座の意思決定のバランスです。
 
 **多腕バンディット問題**：
+
 - 探索：新しい選択肢の情報を得る
 - 活用：現在の最良選択肢を選ぶ
 
@@ -276,6 +289,7 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 信念分布からサンプリングして行動選択
 
 **Upper Confidence Bound (UCB)**：
+
 \[a^* = \arg\max_a [\mu_a + c\sqrt{\frac{\ln t}{n_a}}]\]
 期待値と不確実性ボーナスの和を最大化
 
@@ -289,10 +303,12 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 
 **知識の局所性**：
 各ノードは局所的情報のみ保持
+
 \[K_i\varphi \text{ はノード}i\text{の局所情報から決まる}\]
 
 **ゴシッププロトコル**：
 部分情報を交換して全体像を構築
+
 \[K_i\varphi \land communicate(i,j) \to K_j\varphi\]
 
 **コンセンサス問題**：
@@ -303,6 +319,7 @@ Zadeh-Dubois-Pradeの可能性理論は、不確実性と不正確性を区別�
 SQLの三値論理による NULL の扱いです。
 
 **NULL の意味論**：
+
 - 値が存在しない（適用不可）
 - 値が不明（存在するが未知）
 - 値が未定（まだ決定されていない）
@@ -320,10 +337,12 @@ WHERE column = value  -- NULL の場合 UNKNOWN
 
 **Dempster-Shafer理論**：
 信念関数による証拠の結合
+
 \[m_{1 \oplus 2}(A) = \frac{\sum_{B \cap C = A} m_1(B) \cdot m_2(C)}{1 - \sum_{B \cap C = \emptyset} m_1(B) \cdot m_2(C)}\]
 
 **カルマンフィルタ**：
 ノイズを含む観測からの状態推定
+
 \[x_{k|k} = x_{k|k-1} + K_k(z_k - Hx_{k|k-1})\]
 
 ### 医療診断での不確実性
@@ -332,6 +351,7 @@ WHERE column = value  -- NULL の場合 UNKNOWN
 
 **症状の部分観測**：
 すべての検査を行えない/行わない状況
+
 \[Symptoms_{observed} \subset Symptoms_{all}\]
 
 **診断の不確実性定量化**：
@@ -342,6 +362,7 @@ P(Disease | PartialSymptoms) =
 
 **追加検査の決定**：
 情報価値が検査コストを上回る検査を選択
+
 \[Test^* = \arg\max_{test} [EVOI(test) - Cost(test)]\]
 
 ---
