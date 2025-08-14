@@ -134,13 +134,13 @@
 
 !!! note "定義5.2.3 —— 反実条件文"
 
-    **反実条件文** \(\psi \boxright \varphi\)：
+    **反実条件文** \(\psi \Box\!\to \varphi\)：
     
     「もし\(\psi\)だったなら、\(\varphi\)だったろう」
     
     **Lewis-Stalnaker意味論**：
 
-    \[M, w \vDash \psi \boxright \varphi \text{ iff } \text{最も近い}\psi\text{-世界で}\varphi\text{が真}\]
+    \[M, w \vDash \psi \Box\!\to \varphi \text{ iff } \text{最も近い}\psi\text{-世界で}\varphi\text{が真}\]
     
     **類似度順序**：\(\leq_w\)により世界間の「近さ」を定義
 
@@ -153,12 +153,12 @@
 
 **真理条件**：
 
-\[M, w \vDash K^{cf}_\psi\varphi \text{ iff } M, w \vDash \psi \boxright K\varphi\]
+\[M, w \vDash K^{cf}_\psi\varphi \text{ iff } M, w \vDash \psi \Box\!\to K\varphi\]
 
 **因果的知識**：
 「AがBの原因であることを知っている」
 
-\[K(\text{cause}(A, B)) \equiv K(\lnot A \boxright \lnot B)\]
+\[K(\text{cause}(A, B)) \equiv K(\lnot A \Box\!\to \lnot B)\]
 
 ### 反実仮想推論の応用
 
@@ -168,7 +168,7 @@
 「もっと勉強していれば合格していただろう」という後悔は、反実仮想的知識\(K^{cf}_{study}(pass)\)を含みます。この知識が将来の行動を改善します。
 
 **説明と理解**：
-現象の説明には反実仮想的要素があります。「重力がなければ物は落ちない」という理解は\(K(\lnot gravity \boxright \lnot fall)\)として形式化されます。
+現象の説明には反実仮想的要素があります。「重力がなければ物は落ちない」という理解は\(K(\lnot gravity \Box\!\to \lnot fall)\)として形式化されます。
 
 **計画と意思決定**：
 「この戦略を取れば成功するだろう」という予測は、まだ実現していない条件での知識\(K^{cf}_{strategy}(success)\)です。
