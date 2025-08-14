@@ -60,6 +60,9 @@ extra_javascript:
   - javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://d3js.org/d3.v4.min.js
+  - https://cdn.jsdelivr.net/npm/venn.js@0.2.20/build/venn.min.js
+  - javascripts/venn-diagrams.js
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css

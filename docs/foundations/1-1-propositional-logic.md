@@ -653,119 +653,47 @@
 
 **第1法則**：\((A \cap B)^c = A^c \cup B^c\)
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 20px 0;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0;">
   <div style="text-align: center;">
-    <div><strong>左辺：(A ∩ B)ᶜ</strong></div>
-    <svg width="180" height="120" viewBox="0 0 180 120">
-      <defs>
-        <pattern id="shade1" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#e8f4fd"/>
-          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <!-- 全体集合の背景 -->
-      <rect x="10" y="10" width="160" height="100" fill="url(#shade1)" stroke="#333" stroke-width="2" rx="5"/>
-      <!-- 集合A -->
-      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
-      <!-- 集合B -->
-      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
-      <!-- 交集A∩Bを白で塗り潰し -->
-      <path d="M 90 60 A 35 35 0 0 0 90 60" fill="white"/>
-      <!-- ラベル -->
-      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
-      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
-      <text x="20" y="25" font-size="12" fill="#333">U</text>
-    </svg>
+    <div style="font-weight: bold; margin-bottom: 10px;">$(A \cap B)^c$</div>
+    <div id="demorgan-law1-left" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
+    <div style="font-size: 0.9em; color: #666; margin-top: 10px;">交集合の補集合（水色の部分）</div>
   </div>
   
-  <div style="font-size: 20px; color: #666;">=</div>
+  <div style="font-size: 24px; font-weight: bold;">=</div>
   
   <div style="text-align: center;">
-    <div><strong>右辺：Aᶜ ∪ Bᶜ</strong></div>
-    <svg width="180" height="120" viewBox="0 0 180 120">
-      <defs>
-        <pattern id="shadeRed" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#ffebee"/>
-          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#e53935" stroke-width="0.5"/>
-        </pattern>
-        <pattern id="shadeGreen" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#e8f5e8"/>
-          <path d="M0,0 l6,6 M-2,4 l4,4 M4,-2 l4,4" stroke="#43a047" stroke-width="0.5"/>
-        </pattern>
-        <pattern id="shadeBoth" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#fff3e0"/>
-          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4 M0,0 l6,6 M-2,4 l4,4 M4,-2 l4,4" stroke="#ff9800" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <!-- 全体集合 -->
-      <rect x="10" y="10" width="160" height="100" fill="white" stroke="#333" stroke-width="2" rx="5"/>
-      <!-- Aの外側（Aᶜ）をシェード -->
-      <rect x="10" y="10" width="160" height="100" fill="url(#shadeRed)" rx="5"/>
-      <!-- Bの外側（Bᶜ）をシェード -->
-      <rect x="10" y="10" width="160" height="100" fill="url(#shadeGreen)" rx="5"/>
-      <!-- 集合A（白で中抜き） -->
-      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
-      <!-- 集合B（白で中抜き） -->
-      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
-      <!-- ラベル -->
-      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
-      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
-      <text x="20" y="25" font-size="12" fill="#333">U</text>
-    </svg>
+    <div style="font-weight: bold; margin-bottom: 10px;">$A^c \cup B^c$</div>
+    <div id="demorgan-law1-right" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
+    <div style="font-size: 0.9em; color: #666; margin-top: 10px;">補集合の和集合（水色の部分）</div>
   </div>
 </div>
 
 **第2法則**：\((A \cup B)^c = A^c \cap B^c\)
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 20px 0;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0;">
   <div style="text-align: center;">
-    <div><strong>左辺：(A ∪ B)ᶜ</strong></div>
-    <svg width="180" height="120" viewBox="0 0 180 120">
-      <defs>
-        <pattern id="shade2" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#e8f4fd"/>
-          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <!-- 全体集合 -->
-      <rect x="10" y="10" width="160" height="100" fill="url(#shade2)" stroke="#333" stroke-width="2" rx="5"/>
-      <!-- 集合A（白で中抜き） -->
-      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
-      <!-- 集合B（白で中抜き） -->
-      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
-      <!-- ラベル -->
-      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
-      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
-      <text x="20" y="25" font-size="12" fill="#333">U</text>
-    </svg>
+    <div style="font-weight: bold; margin-bottom: 10px;">$(A \cup B)^c$</div>
+    <div id="demorgan-law2-left" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
+    <div style="font-size: 0.9em; color: #666; margin-top: 10px;">和集合の補集合（水色の部分）</div>
   </div>
   
-  <div style="font-size: 20px; color: #666;">=</div>
+  <div style="font-size: 24px; font-weight: bold;">=</div>
   
   <div style="text-align: center;">
-    <div><strong>右辺：Aᶜ ∩ Bᶜ</strong></div>
-    <svg width="180" height="120" viewBox="0 0 180 120">
-      <defs>
-        <pattern id="shade3" patternUnits="userSpaceOnUse" width="6" height="6">
-          <rect width="6" height="6" fill="#e8f4fd"/>
-          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <!-- 全体集合 -->
-      <rect x="10" y="10" width="160" height="100" fill="white" stroke="#333" stroke-width="2" rx="5"/>
-      <!-- AとB以外をシェード -->
-      <rect x="10" y="10" width="160" height="100" fill="url(#shade3)" rx="5"/>
-      <!-- 集合A（白で中抜き） -->
-      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
-      <!-- 集合B（白で中抜き） -->
-      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
-      <!-- ラベル -->
-      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
-      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
-      <text x="20" y="25" font-size="12" fill="#333">U</text>
-    </svg>
+    <div style="font-weight: bold; margin-bottom: 10px;">$A^c \cap B^c$</div>
+    <div id="demorgan-law2-right" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
+    <div style="font-size: 0.9em; color: #666; margin-top: 10px;">補集合の積集合（水色の部分）</div>
   </div>
 </div>
+
+<!-- フォールバック：JavaScriptが無効な場合 -->
+<noscript>
+  <p>ベン図を表示するにはJavaScriptを有効にしてください。</p>
+  <p>代替画像：</p>
+  <img src="../images/demorgan_simple_1.png" alt="ド・モルガンの第1法則" style="max-width: 100%;">
+  <img src="../images/demorgan_simple_2.png" alt="ド・モルガンの第2法則" style="max-width: 100%;">
+</noscript>
 
 !!! tip "ベン図の読み方"
     
