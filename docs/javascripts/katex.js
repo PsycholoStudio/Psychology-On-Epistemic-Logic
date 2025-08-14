@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     renderMathInElement(document.body, {
         // デリミタの設定
         delimiters: [
-            {left: '\(', right: '\)', display: false},
-            {left: '\[', right: '\]', display: true}
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
         ],
         // オプション
         throwOnError: false,
