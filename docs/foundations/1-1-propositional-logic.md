@@ -66,7 +66,7 @@
     
     **真理値（Truth Value）**：命題が持つ「真（True）」または「偽（False）」という二つの値
 
-命題論理では、まず**命題**という概念から始めます。命題とは、真偽が明確に定まる文のことです。「今日は雨が降っている」「東京は日本の首都である」などは命題ですが、「おはようございます」「美しい花だ」などは命題ではありません。
+このように、命題論理では文の「真偽が客観的に定まる」ことが重要です。主観的判断や感情表現、命令文などは論理学の対象外となります。
 
 重要なのは、命題が必ず「真」か「偽」のどちらか一方の値を持つことです。これを**二値性**と呼びます。曖昧な中間状態は許されません。
 
@@ -476,7 +476,7 @@
 
 **分解規則の例**：
 
-- \(\neg(\phi \land \psi)\) → \(\neg\phi \lor \neg\psi\)（ド・モルガン法則、[定理1.1.1](#ドモルガンの法則)参照）
+- \(\neg(\phi \land \psi)\) → \(\neg\phi \lor \neg\psi\)（ド・モルガンの第一法則、詳細は[1.1.5節](#集合論の基礎と論理法則)参照）
 - \(\phi \rightarrow \psi\) → \(\neg\phi \lor \psi\)（含意の定義）
 
 #### タブロー法の具体的証明例
@@ -651,19 +651,133 @@
 
 ド・モルガンの法則は、ベン図で視覚的に理解できます：
 
-!!! tip "ベン図での確認"
+**第1法則**：\((A \cap B)^c = A^c \cup B^c\)
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 20px 0;">
+  <div style="text-align: center;">
+    <div><strong>左辺：(A ∩ B)ᶜ</strong></div>
+    <svg width="180" height="120" viewBox="0 0 180 120">
+      <defs>
+        <pattern id="shade1" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#e8f4fd"/>
+          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <!-- 全体集合の背景 -->
+      <rect x="10" y="10" width="160" height="100" fill="url(#shade1)" stroke="#333" stroke-width="2" rx="5"/>
+      <!-- 集合A -->
+      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
+      <!-- 集合B -->
+      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
+      <!-- 交集A∩Bを白で塗り潰し -->
+      <path d="M 90 60 A 35 35 0 0 0 90 60" fill="white"/>
+      <!-- ラベル -->
+      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
+      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
+      <text x="20" y="25" font-size="12" fill="#333">U</text>
+    </svg>
+  </div>
+  
+  <div style="font-size: 20px; color: #666;">=</div>
+  
+  <div style="text-align: center;">
+    <div><strong>右辺：Aᶜ ∪ Bᶜ</strong></div>
+    <svg width="180" height="120" viewBox="0 0 180 120">
+      <defs>
+        <pattern id="shadeRed" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#ffebee"/>
+          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#e53935" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="shadeGreen" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#e8f5e8"/>
+          <path d="M0,0 l6,6 M-2,4 l4,4 M4,-2 l4,4" stroke="#43a047" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="shadeBoth" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#fff3e0"/>
+          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4 M0,0 l6,6 M-2,4 l4,4 M4,-2 l4,4" stroke="#ff9800" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <!-- 全体集合 -->
+      <rect x="10" y="10" width="160" height="100" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+      <!-- Aの外側（Aᶜ）をシェード -->
+      <rect x="10" y="10" width="160" height="100" fill="url(#shadeRed)" rx="5"/>
+      <!-- Bの外側（Bᶜ）をシェード -->
+      <rect x="10" y="10" width="160" height="100" fill="url(#shadeGreen)" rx="5"/>
+      <!-- 集合A（白で中抜き） -->
+      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
+      <!-- 集合B（白で中抜き） -->
+      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
+      <!-- ラベル -->
+      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
+      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
+      <text x="20" y="25" font-size="12" fill="#333">U</text>
+    </svg>
+  </div>
+</div>
+
+**第2法則**：\((A \cup B)^c = A^c \cap B^c\)
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin: 20px 0;">
+  <div style="text-align: center;">
+    <div><strong>左辺：(A ∪ B)ᶜ</strong></div>
+    <svg width="180" height="120" viewBox="0 0 180 120">
+      <defs>
+        <pattern id="shade2" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#e8f4fd"/>
+          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <!-- 全体集合 -->
+      <rect x="10" y="10" width="160" height="100" fill="url(#shade2)" stroke="#333" stroke-width="2" rx="5"/>
+      <!-- 集合A（白で中抜き） -->
+      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
+      <!-- 集合B（白で中抜き） -->
+      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
+      <!-- ラベル -->
+      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
+      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
+      <text x="20" y="25" font-size="12" fill="#333">U</text>
+    </svg>
+  </div>
+  
+  <div style="font-size: 20px; color: #666;">=</div>
+  
+  <div style="text-align: center;">
+    <div><strong>右辺：Aᶜ ∩ Bᶜ</strong></div>
+    <svg width="180" height="120" viewBox="0 0 180 120">
+      <defs>
+        <pattern id="shade3" patternUnits="userSpaceOnUse" width="6" height="6">
+          <rect width="6" height="6" fill="#e8f4fd"/>
+          <path d="M0,6 l6,-6 M-2,2 l4,-4 M4,8 l4,-4" stroke="#1976d2" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <!-- 全体集合 -->
+      <rect x="10" y="10" width="160" height="100" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+      <!-- AとB以外をシェード -->
+      <rect x="10" y="10" width="160" height="100" fill="url(#shade3)" rx="5"/>
+      <!-- 集合A（白で中抜き） -->
+      <circle cx="70" cy="60" r="35" fill="white" stroke="#e53935" stroke-width="2"/>
+      <!-- 集合B（白で中抜き） -->
+      <circle cx="110" cy="60" r="35" fill="white" stroke="#43a047" stroke-width="2"/>
+      <!-- ラベル -->
+      <text x="55" y="40" text-anchor="middle" font-size="14" fill="#e53935"><tspan font-weight="bold">A</tspan></text>
+      <text x="125" y="40" text-anchor="middle" font-size="14" fill="#43a047"><tspan font-weight="bold">B</tspan></text>
+      <text x="20" y="25" font-size="12" fill="#333">U</text>
+    </svg>
+  </div>
+</div>
+
+!!! tip "ベン図の読み方"
     
-    **第1法則**：\((A \cap B)^c = A^c \cup B^c\)
-    
+    **第1法則の解釈**：
     - 左辺：AとBの共通部分の補集合（重なりの外側すべて）
     - 右辺：Aの外側とBの外側の和集合（重なりの外側すべて）
-    - 結果は同じ領域を表す
+    - 結果：同じ領域を表すことが視覚的に確認できる
     
-    **第2法則**：\((A \cup B)^c = A^c \cap B^c\)
-    
+    **第2法則の解釈**：
     - 左辺：AまたはBに含まれない部分（どちらにも属さない領域）
     - 右辺：Aの外側かつBの外側（どちらにも属さない領域）
-    - 結果は同じ領域を表す
+    - 結果：同じ領域を表すことが視覚的に確認できる
 
 ### 関数と関係の基礎
 
@@ -778,20 +892,22 @@
     
     **推論の妥当性**：前提1で \(x = socrates\) とすると、\(Human(socrates) \rightarrow Mortal(socrates)\)。前提2と含意除去により結論が導出される。
 
-### 集合論的基礎
+### 量化子の集合論的解釈
 
-量化子の意味を理解するために、基本的な集合概念を確認しておきます：
+[1.1.5節](#集合論の基礎と論理法則)で学んだ集合論の概念を使って、量化子を集合論的に解釈できます：
 
-!!! note "定義1.1.9 —— 基本的集合概念"
+!!! info "量化子の集合論的意味"
     
     **定義域**：\(D\) = 個体変数が取りうる値の集合
     
-    **述語の外延**：\(\|P\| = \{x \in D : P(x) \text{が真}\}\)
+    **述語の外延**：\(\|P\| = \{x \in D : P(x) \text{が真}\}\)（述語Pを満たす要素の集合）
     
-    **量化子の集合論的意味**：
+    **量化子と集合演算の対応**：
     
     - \(\forall x P(x)\) が真 ⟺ \(\|P\| = D\)（すべての個体が性質Pを持つ）
     - \(\exists x P(x)\) が真 ⟺ \(\|P\| \neq \emptyset\)（性質Pを持つ個体が存在）
+    
+    この対応により、量化子による推論を集合論の言葉で理解できます。
 
 ### 関係述語
 
@@ -840,7 +956,7 @@
 
 述語論理には、量化の対象によって**階層**があります。これは様相論理の表現力に重要な影響を与えます：
 
-!!! note "定義1.1.10 —— 述語論理の階層"
+!!! note "定義1.1.9 —— 述語論理の階層"
     
     **一階述語論理（First-Order Logic）**：
     
