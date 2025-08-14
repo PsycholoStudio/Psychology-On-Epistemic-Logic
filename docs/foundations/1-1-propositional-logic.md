@@ -655,7 +655,7 @@
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0;">
   <div style="text-align: center;">
-    <div style="font-weight: bold; margin-bottom: 10px;">$(A \cap B)^c$</div>
+    <div style="font-weight: bold; margin-bottom: 10px;">\((A \cap B)^c\)</div>
     <div id="demorgan-law1-left" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px;">交集合の補集合（水色の部分）</div>
   </div>
@@ -663,7 +663,7 @@
   <div style="font-size: 24px; font-weight: bold;">=</div>
   
   <div style="text-align: center;">
-    <div style="font-weight: bold; margin-bottom: 10px;">$A^c \cup B^c$</div>
+    <div style="font-weight: bold; margin-bottom: 10px;">\(A^c \cup B^c\)</div>
     <div id="demorgan-law1-right" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px;">補集合の和集合（水色の部分）</div>
   </div>
@@ -673,7 +673,7 @@
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0;">
   <div style="text-align: center;">
-    <div style="font-weight: bold; margin-bottom: 10px;">$(A \cup B)^c$</div>
+    <div style="font-weight: bold; margin-bottom: 10px;">\((A \cup B)^c\)</div>
     <div id="demorgan-law2-left" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px;">和集合の補集合（水色の部分）</div>
   </div>
@@ -681,7 +681,7 @@
   <div style="font-size: 24px; font-weight: bold;">=</div>
   
   <div style="text-align: center;">
-    <div style="font-weight: bold; margin-bottom: 10px;">$A^c \cap B^c$</div>
+    <div style="font-weight: bold; margin-bottom: 10px;">\(A^c \cap B^c\)</div>
     <div id="demorgan-law2-right" style="background: white; border: 1px solid #ccc; border-radius: 8px;"></div>
     <div style="font-size: 0.9em; color: #666; margin-top: 10px;">補集合の積集合（水色の部分）</div>
   </div>
