@@ -72,10 +72,10 @@ nav:
   - ホーム: index.md
   - 基礎編:
     - 第1章 様相論理入門:
-      - 1.1 命題論理の復習: foundations/1-1-propositional-logic.md
-      - 1.2 様相論理の動機と直観: foundations/1-2-modal-motivation.md
-      - 1.3 様相言語の構文: foundations/1-3-modal-syntax.md
-      - 1.4 応用分野概観: foundations/1-4-applications-overview.md
+      - 1.1 様相論理の動機と直観: foundations/1-1-modal-motivation.md
+      - 1.2 命題論理の復習: foundations/1-2-propositional-logic.md
+      - 1.3 述語論理の復習: foundations/1-3-predicate-logic.md
+      - 1.4 様相論理の導入: foundations/1-4-modal-introduction.md
       - 1.5 論理と心の関係: foundations/1-5-logic-and-mind.md
     - 第2章 クリプキ意味論:
       - 2.1 可能世界の概念: foundations/2-1-possible-worlds.md

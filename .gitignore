@@ -1,0 +1,27 @@
+# バックアップディレクトリ
+backups/
+
+# 一時ファイル
+*.tmp
+*.bak
+*~
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# MkDocs
+site/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.pytest_cache/
