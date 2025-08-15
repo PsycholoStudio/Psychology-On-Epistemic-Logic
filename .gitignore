@@ -9,9 +9,18 @@ backups/
 # 作業履歴（ローカル管理）
 work_history.md
 
+# Claude Code設定（ローカル）
+.claude/
+
+# IDE設定
+.vscode/
+.idea/
+*.sublime-*
+
 # OS生成ファイル
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # MkDocs
 site/
@@ -23,8 +32,28 @@ __pycache__/
 *.pyd
 .Python
 env/
+venv/
+.env
+.venv
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
 .coverage
 .pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoint
+
+# ログファイル
+*.log
+logs/
+
+# 個人メモ・下書き
+drafts/
+personal_notes/
+TODO.md
+NOTES.md
