@@ -6,6 +6,9 @@ backups/
 *.bak
 *~
 
+# 作業履歴（ローカル管理）
+work_history.md
+
 # OS生成ファイル
 .DS_Store
 Thumbs.db
