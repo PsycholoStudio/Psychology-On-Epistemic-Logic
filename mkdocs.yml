@@ -37,7 +37,6 @@ plugins:
       lang: ja
   - git-revision-date-localized:
       type: date
-  - privacy
 
 markdown_extensions:
   - admonition
